@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <style>
-      /* body {
+      body {
         background: #000;
-      } */
+      }
       #home {
         background: linear-gradient(to bottom, #e4ff31, #8cffa7);
         width: 100%;
@@ -21,6 +21,7 @@
         justify-content: center;
       }
       #home h1 {
+        color: #000;
         text-align: center;
         font-size: 10vw;
         line-height: 1;
@@ -33,65 +34,104 @@
 
       /* about */
       #about {
-        margin: 300px 0;
+        margin: 300px auto;
+        padding: 5vw;
       }
       #about .me .text {
         display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 100px;
       }
       #about .me .text h2 {
-        font-size: 8vh;
+        font-size: 12vh;
         line-height: 1;
         color: #8cffa7;
       }
       #about .me .text p {
-        width: 50%;
+        min-width: 400px;
+        width: 40%;
         font-size: 15px;
         font-family: "ChosunNm";
         line-height: 2;
-        padding-left: 50px;
+        padding-left: 3vw;
       }
-      #about .me .text p span {
+      #about .me .text p a {
         display: block;
       }
       #about .me .image {
-        height: 700px;
+        height: 50vw;
         display: flex;
         flex-direction: row-reverse;
         position: relative;
       }
       #about .me .image img {
-        width: 650px;
-        height: 400px;
+        width: 45vw;
+        height: 30vw;
         object-fit: cover;
-        border: 8px solid #8cffa7;
+        border: 10px solid #8cffa7;
       }
       #about .me .image .arrow {
-        width: 50px;
-        border: #8cffa7 solid 1px;
+        width: 10vw;
+        height: 10vw;
+        border: #8cffa7 solid 8px;
+        background: #000;
+        z-index: 20;
       }
       #about .me .image .arrow svg {
-        margin: 0 auto;
+        width: 9vw;
+        height: 9vw;
       }
       #about .me .image .img01 {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 7vw;
+        right: 3vw;
         z-index: 10;
       }
       #about .me .image .img02 {
         position: absolute;
-        top: 10vw;
+        top: 15vw;
+        left: 3vw;
+      }
+      #about .me .image .img02 .arrow {
+        position: absolute;
+        top: -50px;
         left: 0;
       }
       #about .me .image .earth {
         position: absolute;
         top: 0;
-        left: 200px;
+        left: 10vw;
+        width: 8vw;
+        height: 8vw;
       }
       #about .me .heart {
         position: absolute;
-        bottom: 0;
-        right: 200px;
+        bottom: -10vw;
+        right: 20vw;
+        width: 7vw;
+        height: 7vw;
+      }
+      #about .skill {
+        display: flex;
+      }
+      #about .skill .chart {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: var(--lime);
+        border-radius: 50%;
+      }
+      #about .skill .chart span {
+        text-align: center;
+        line-height: 5;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--black);
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
       }
     </style>
   </head>
@@ -102,126 +142,93 @@
         DEV <span>FRONTEND</span>
       </h1>
     </section>
+
     <section id="about">
       <div class="about__inner">
-        <div class="container">
-          <article class="me">
-            <div class="text">
-              <h2>
-                I AM <br />
-                DEVELOPER
-              </h2>
+        <article class="me">
+          <div class="text">
+            <h2>
+              I AM <br />
+              DEVELOPER
+            </h2>
 
-              <p>
-                안녕하세요, 프론트엔드의 매력은 상상하는 것을 실현하는 것이라고
-                생각합니다. 자기가 상상한것을 실현시키기 위해서는 많은 노력과
-                실력이 밑바탕이 되어야 한다고 생각합니다. 그런 부분에서, 저는
-                아직 많이 배워야하고, 훨씬 더 많은 노력을 해야한다는 것을 알고
-                있습니다. <br />
-                앞으로 항상 배우고 발전하는 프론트엔드 개발자가 되겠습니다.
+            <p>
+              안녕하세요, 프론트엔드의 매력은 상상하는 것을 실현하는 것이라고
+              생각합니다. 자기가 상상한것을 실현시키기 위해서는 많은 노력과
+              실력이 밑바탕이 되어야 한다고 생각합니다. 그런 부분에서, 저는 아직
+              많이 배워야하고, 훨씬 더 많은 노력을 해야한다는 것을 알고
+              있습니다. <br />
+              앞으로 항상 배우고 발전하는 프론트엔드 개발자가 되겠습니다.
 
-                <span class="mt30">깃허브 </span>
-                <span>인스타 </span>
-              </p>
-            </div>
-            <div class="image mt20">
+              <a href="" class="mt30">Git Hub </a>
+              <a href="">Tistory </a>
+            </p>
+          </div>
+          <div class="image mt20">
+            <svg
+              class="earth"
+              viewBox="0 0 98 98"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.14999 49.07H94.3"
+                stroke="#88FFA4"
+                stroke-width="5.82"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M94.3099 49.07C94.3099 58.0849 91.6368 66.8973 86.6284 74.3929C81.62 81.8885 74.5013 87.7306 66.1727 91.1804C57.844 94.6303 48.6794 95.5329 39.8378 93.7742C30.9961 92.0155 22.8745 87.6744 16.5001 81.2999C10.1256 74.9255 5.78448 66.8039 4.02576 57.9622C2.26705 49.1206 3.16967 39.9559 6.61951 31.6273C10.0694 23.2986 15.9115 16.18 23.4071 11.1716C30.9027 6.16324 39.7151 3.49 48.73 3.49C54.7156 3.49 60.6427 4.66893 66.1727 6.95954C71.7027 9.25015 76.7274 12.6076 80.9599 16.8401C85.1924 21.0726 88.5498 26.0972 90.8404 31.6273C93.131 37.1573 94.3099 43.0844 94.3099 49.07V49.07Z"
+                stroke="#88FFA4"
+                stroke-width="5.82"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M70.6 49.07C70.6 74.24 60.81 94.64 48.73 94.64C36.65 94.64 26.87 74.24 26.87 49.07C26.87 23.9 36.66 3.49 48.73 3.49C60.8 3.49 70.6 23.9 70.6 49.07Z"
+                stroke="#88FFA4"
+                stroke-width="5.82"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M48.73 3.49V94.64"
+                stroke="#88FFA4"
+                stroke-width="5.82"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M94.31 49.07C94.31 60.59 73.9 69.94 48.73 69.94C23.56 69.94 3.16 60.59 3.16 49.07C3.16 37.55 23.56 28.19 48.73 28.19C73.9 28.19 94.31 37.54 94.31 49.07Z"
+                stroke="#88FFA4"
+                stroke-width="5.82"
+                stroke-miterlimit="10"
+              ></path>
+            </svg>
+            <div class="arrow mr100" style="transform: rotate(45deg)">
               <svg
-                class="earth"
-                width="115"
-                height="115"
-                viewBox="0 0 98 98"
+                style="transform: rotate(227deg)"
+                viewBox="0 0 18 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                class="workCardArrow__arrow"
               >
                 <path
-                  d="M3.14999 49.07H94.3"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
+                  d="M0 7.2124H15.6"
+                  stroke="#8DFFA2"
+                  stroke-width="1.5"
                   stroke-miterlimit="10"
                 ></path>
                 <path
-                  d="M94.3099 49.07C94.3099 58.0849 91.6368 66.8973 86.6284 74.3929C81.62 81.8885 74.5013 87.7306 66.1727 91.1804C57.844 94.6303 48.6794 95.5329 39.8378 93.7742C30.9961 92.0155 22.8745 87.6744 16.5001 81.2999C10.1256 74.9255 5.78448 66.8039 4.02576 57.9622C2.26705 49.1206 3.16967 39.9559 6.61951 31.6273C10.0694 23.2986 15.9115 16.18 23.4071 11.1716C30.9027 6.16324 39.7151 3.49 48.73 3.49C54.7156 3.49 60.6427 4.66893 66.1727 6.95954C71.7027 9.25015 76.7274 12.6076 80.9599 16.8401C85.1924 21.0726 88.5498 26.0972 90.8404 31.6273C93.131 37.1573 94.3099 43.0844 94.3099 49.07V49.07Z"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
-                  stroke-miterlimit="10"
-                ></path>
-                <path
-                  d="M70.6 49.07C70.6 74.24 60.81 94.64 48.73 94.64C36.65 94.64 26.87 74.24 26.87 49.07C26.87 23.9 36.66 3.49 48.73 3.49C60.8 3.49 70.6 23.9 70.6 49.07Z"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
-                  stroke-miterlimit="10"
-                ></path>
-                <path
-                  d="M48.73 3.49V94.64"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
-                  stroke-miterlimit="10"
-                ></path>
-                <path
-                  d="M94.31 49.07C94.31 60.59 73.9 69.94 48.73 69.94C23.56 69.94 3.16 60.59 3.16 49.07C3.16 37.55 23.56 28.19 48.73 28.19C73.9 28.19 94.31 37.54 94.31 49.07Z"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
+                  d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                  stroke="#8DFFA2"
+                  stroke-width="1.5"
                   stroke-miterlimit="10"
                 ></path>
               </svg>
+            </div>
 
-              <div class="img01">
-                <div class="arrow">
-                  <svg
-                    width="44"
-                    height="44"
-                    viewBox="0 0 18 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="workCardArrow__arrow"
-                  >
-                    <path
-                      d="M0 7.2124H15.6"
-                      stroke="#8DFFA2"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    ></path>
-                    <path
-                      d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
-                      stroke="#8DFFA2"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    ></path>
-                  </svg>
-                </div>
-
-                <img src="assets/img/me_body.png" alt="전신샷" />
-              </div>
-              <div class="img02">
-                <div class="arrow">
-                  <svg
-                    width="44"
-                    height="44"
-                    viewBox="0 0 18 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="workCardArrow__arrow"
-                  >
-                    <path
-                      d="M0 7.2124H15.6"
-                      stroke="#8DFFA2"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    ></path>
-                    <path
-                      d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
-                      stroke="#8DFFA2"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    ></path>
-                  </svg>
-                </div>
-                <img src="assets/img/me_face.png" alt="얼굴샷" />
-              </div>
+            <div class="img01">
+              <img src="assets/img/me_body.png" alt="전신샷" />
               <svg
                 class="heart"
-                width="99"
-                height="93"
                 viewBox="0 0 99 93"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -234,12 +241,42 @@
                 ></path>
               </svg>
             </div>
-          </article>
-          <article class="skill">
-            <div>아아아</div>
-          </article>
-        </div>
-        <!-- //container -->
+
+            <div class="img02">
+              <div class="arrow">
+                <svg
+                  style="transform: rotate(-45deg)"
+                  viewBox="0 0 18 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="workCardArrow__arrow"
+                >
+                  <path
+                    d="M0 7.2124H15.6"
+                    stroke="#8DFFA2"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                  ></path>
+                  <path
+                    d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                    stroke="#8DFFA2"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                  ></path>
+                </svg>
+              </div>
+              <img src="assets/img/me_face.png" alt="얼굴샷" class="ml50" />
+            </div>
+          </div>
+        </article>
+        <article class="skill">
+          <div class="chart"><span class="chart_cen">html</span></div>
+          <div class="chart"><span class="chart_cen">CSS</span></div>
+          <div class="chart"><span class="chart_cen">vue</span></div>
+          <div class="chart"><span class="chart_cen">react</span></div>
+          <div class="chart"><span class="chart_cen">js</span></div>
+          <div class="chart"><span class="chart_cen">php</span></div>
+        </article>
       </div>
       <!-- //about__inner -->
     </section>

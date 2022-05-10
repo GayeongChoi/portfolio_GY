@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+:root {
+  --font-color: #fff;
+  --lime: #8cffa7;
+  --yellow: #ffff31;
+  --black: #000;
+}
+
 /* 컨테이너 */
 .container {
   max-width: 1200px;
@@ -173,6 +180,28 @@
   margin-bottom: 100px !important;
 }
 
+.pt0 {
+  padding-top: 0 !important;
+}
+.pt10 {
+  padding-top: 10px !important;
+}
+.pt20 {
+  padding-top: 20px !important;
+}
+.pt30 {
+  padding-top: 30px !important;
+}
+.pt40 {
+  padding-top: 40px !important;
+}
+.pt50 {
+  padding-top: 50px !important;
+}
+.pt100 {
+  padding-top: 100px !important;
+}
+
 /* 여백 초기화 */
 img,
 body,
@@ -231,14 +260,14 @@ input,
 select,
 table,
 textarea {
-  color: #222;
+  color: #fff;
   font-family: "GmarketSans", "AppleSDGothicNeo-Regular", "Malgun Gothic",
     "맑은 고딕", "dotum", "돋움";
 }
 
 /* 링크 초기화 */
 a {
-  color: #222;
+  color: #fff;
   text-decoration: none;
 }
 
