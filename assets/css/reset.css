@@ -1,12 +1,3 @@
-@charset "UTF-8";
-
-:root {
-  --font-color: #fff;
-  --lime: #8cffa7;
-  --yellow: #ffff31;
-  --black: #000;
-}
-
 /* 컨테이너 */
 .container {
   max-width: 1200px;

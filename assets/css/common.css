@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+:root {
+  --font-color: #fff;
+  --white: #fff;
+  --lime: #8cffa7;
+  --yellow: #ffff31;
+  --black: #000;
+  --green: #e1ff31;
+}
+
+/* 바디 색상 */
+body {
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* 컨텐츠 */
+.contents {
+  padding: 20vw 5vw;
+}
+
+/* main 헤더 */
+.header {
+  width: 100vw;
+  height: 20vw;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(116, 214, 139, 0.7),
+    var(--green) 100%
+  );
+
+  text-align: center;
+  line-height: 20vw;
+  font-size: 6vw;
+  font-weight: 700;
+}

@@ -113,25 +113,31 @@
       }
       #about .skill {
         display: flex;
+        justify-content: space-around;
+        margin-top: 100px;
       }
       #about .skill .chart {
         position: relative;
+        min-width: 200px;
         width: 200px;
         height: 200px;
-        background: var(--lime);
+        background: conic-gradient(var(--black) 90deg, var(--lime) 50deg);
         border-radius: 50%;
+        margin: 5px;
       }
       #about .skill .chart span {
+        font-size: 40px;
+        text-transform: uppercase;
+        line-height: 180px;
         text-align: center;
-        line-height: 5;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         background: var(--black);
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
+        width: 88%;
+        height: 88%;
       }
     </style>
   </head>
@@ -226,7 +232,7 @@
             </div>
 
             <div class="img01">
-              <img src="assets/img/me_body.png" alt="전신샷" />
+              <img src="assets/img/me_face.png" alt="얼굴샷" />
               <svg
                 class="heart"
                 viewBox="0 0 99 93"
@@ -265,7 +271,7 @@
                   ></path>
                 </svg>
               </div>
-              <img src="assets/img/me_face.png" alt="얼굴샷" class="ml50" />
+              <img src="assets/img/me_body.png" alt="전신샷" class="ml50" />
             </div>
           </div>
         </article>
