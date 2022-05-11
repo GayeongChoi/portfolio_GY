@@ -1,7 +1,7 @@
 /* 컨테이너 */
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 30vh auto;
   width: 100%;
   /* background: rgba(0,0,0,0.3); */
 }
@@ -10,6 +10,10 @@
     padding: 0 20px;
   }
 }
+.contents {
+  padding: 20vw 2vw;
+}
+
 #contents {
   min-height: 70vh;
 }
@@ -191,6 +195,28 @@
 }
 .pt100 {
   padding-top: 100px !important;
+}
+
+.pr0 {
+  padding-right: 0 !important;
+}
+.pr10 {
+  padding-right: 10px !important;
+}
+.pr20 {
+  padding-right: 20px !important;
+}
+.pr30 {
+  padding-right: 30px !important;
+}
+.pr40 {
+  padding-right: 40px !important;
+}
+.pr50 {
+  padding-right: 50px !important;
+}
+.pr100 {
+  padding-right: 100px !important;
 }
 
 /* 여백 초기화 */

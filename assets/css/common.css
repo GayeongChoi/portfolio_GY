@@ -15,11 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-/* 컨텐츠 */
-.contents {
-  padding: 20vw 5vw;
-}
-
 /* main 헤더 */
 .header {
   width: 100vw;
