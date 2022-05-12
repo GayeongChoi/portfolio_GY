@@ -14,16 +14,12 @@
       /* about */
       #about {
       }
-      #about svg {
-        z-index: 100;
-      }
-
       /* about .me .text*/
       #about .me .text {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-bottom: 10vh;
+        margin-bottom: 20vh;
       }
       #about .me .text .title {
         color: #8cffa7;
@@ -31,7 +27,6 @@
       }
       #about .me .text .title h2 {
         font-size: 100px;
-        margin-right: 10px;
       }
       #about .me .text .int {
         width: 40%;
@@ -48,39 +43,46 @@
 
       /* about .me .image*/
       #about .me .image {
+        /* display: flex; */
         width: 100%;
       }
-      #about .me .image > div {
-      }
       #about .me .image img {
-        width: 60%;
+        width: 40vw;
         height: 25vw;
         object-fit: cover;
-        border: 8px solid #8cffa7;
+        border: 7px solid #8cffa7;
       }
-      #about .me .image svg {
-        width: 10vw;
-        height: 10vw;
-      }
-      #about .me .image .img01 {
+      #about .me .image .img01 > div {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
       }
-      #about .me .image .img02 {
+      #about .me .image .img02 > div {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
       }
-      #about .me .image .img02 .img02__svg {
+
+      #about .me .image .img01 .arrow {
         position: relative;
       }
-      #about .me .image .img02 .img02__svg .arrow {
+      #about .me .image .img01 .arrow svg {
         position: absolute;
         top: 0;
-        left: 0px;
+        right: 0;
+      }
+      #about .me .image .img02 .arrow {
+        position: relative;
+      }
+      #about .me .image .img02 .arrow svg {
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       /* about .skill스킬 */
       #about .skill {
-        display: none;
+        display: flex;
         justify-content: space-around;
         margin-top: 100px;
       }
@@ -169,137 +171,140 @@
             <!-- //text -->
 
             <div class="image">
-              <div class="img01">
-                <svg
-                  class="earth"
-                  viewBox="0 0 98 98"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M94.3099 49.07C94.3099 58.0849 91.6368 66.8973 86.6284 74.3929C81.62 81.8885 74.5013 87.7306 66.1727 91.1804C57.844 94.6303 48.6794 95.5329 39.8378 93.7742C30.9961 92.0155 22.8745 87.6744 16.5001 81.2999C10.1256 74.9255 5.78448 66.8039 4.02576 57.9622C2.26705 49.1206 3.16967 39.9559 6.61951 31.6273C10.0694 23.2986 15.9115 16.18 23.4071 11.1716C30.9027 6.16324 39.7151 3.49 48.73 3.49C54.7156 3.49 60.6427 4.66893 66.1727 6.95954C71.7027 9.25015 76.7274 12.6076 80.9599 16.8401C85.1924 21.0726 88.5498 26.0972 90.8404 31.6273C93.131 37.1573 94.3099 43.0844 94.3099 49.07V49.07Z"
-                    stroke="#88FFA4"
-                    stroke-width="5.82"
-                    stroke-miterlimit="10"
-                    fill="black"
-                    alt="맨뒤 테두리, 배경색o"
-                  ></path>
-                  <path
-                    d="M3.14999 49.07H94.3"
-                    stroke="#88FFA4"
-                    stroke-width="5.82"
-                    stroke-miterlimit="10"
-                    fill="black"
-                    z-in
-                  ></path>
-                  <path
-                    d="M70.6 49.07C70.6 74.24 60.81 94.64 48.73 94.64C36.65 94.64 26.87 74.24 26.87 49.07C26.87 23.9 36.66 3.49 48.73 3.49C60.8 3.49 70.6 23.9 70.6 49.07Z"
-                    stroke="#88FFA4"
-                    stroke-width="5.82"
-                    stroke-miterlimit="10"
-                  ></path>
-                  <path
-                    d="M48.73 3.49V94.64"
-                    stroke="#88FFA4"
-                    stroke-width="5.82"
-                    stroke-miterlimit="10"
-                  ></path>
-                  <path
-                    d="M94.31 49.07C94.31 60.59 73.9 69.94 48.73 69.94C23.56 69.94 3.16 60.59 3.16 49.07C3.16 37.55 23.56 28.19 48.73 28.19C73.9 28.19 94.31 37.54 94.31 49.07Z"
-                    stroke="#88FFA4"
-                    stroke-width="5.82"
-                    stroke-miterlimit="10"
-                  ></path>
-                </svg>
-                <svg
-                  width="90"
-                  height="90"
-                  viewBox="0 0 90 90"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="2"
-                    y="2.09796"
-                    width="85.8227"
-                    height="85.8227"
-                    fill="black"
-                    stroke="#FFFF31"
-                    stroke-width="4"
-                  />
-                  <path
-                    d="M20.5989 70.7445L69.35 21.9934"
-                    stroke="#FFFF31"
-                    stroke-width="4"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
-                    stroke="#FFFF31"
-                    stroke-width="4"
-                    stroke-miterlimit="10"
-                  />
-                </svg>
+              <svg
+                class="earth"
+                width="50"
+                hight=""
+                viewBox="0 0 98 98"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.14999 49.07H94.3"
+                  stroke="#88FFA4"
+                  stroke-width="5.82"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M94.3099 49.07C94.3099 58.0849 91.6368 66.8973 86.6284 74.3929C81.62 81.8885 74.5013 87.7306 66.1727 91.1804C57.844 94.6303 48.6794 95.5329 39.8378 93.7742C30.9961 92.0155 22.8745 87.6744 16.5001 81.2999C10.1256 74.9255 5.78448 66.8039 4.02576 57.9622C2.26705 49.1206 3.16967 39.9559 6.61951 31.6273C10.0694 23.2986 15.9115 16.18 23.4071 11.1716C30.9027 6.16324 39.7151 3.49 48.73 3.49C54.7156 3.49 60.6427 4.66893 66.1727 6.95954C71.7027 9.25015 76.7274 12.6076 80.9599 16.8401C85.1924 21.0726 88.5498 26.0972 90.8404 31.6273C93.131 37.1573 94.3099 43.0844 94.3099 49.07V49.07Z"
+                  stroke="#88FFA4"
+                  stroke-width="5.82"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M70.6 49.07C70.6 74.24 60.81 94.64 48.73 94.64C36.65 94.64 26.87 74.24 26.87 49.07C26.87 23.9 36.66 3.49 48.73 3.49C60.8 3.49 70.6 23.9 70.6 49.07Z"
+                  stroke="#88FFA4"
+                  stroke-width="5.82"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M48.73 3.49V94.64"
+                  stroke="#88FFA4"
+                  stroke-width="5.82"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M94.31 49.07C94.31 60.59 73.9 69.94 48.73 69.94C23.56 69.94 3.16 60.59 3.16 49.07C3.16 37.55 23.56 28.19 48.73 28.19C73.9 28.19 94.31 37.54 94.31 49.07Z"
+                  stroke="#88FFA4"
+                  stroke-width="5.82"
+                  stroke-miterlimit="10"
+                ></path>
+              </svg>
+              <!-- //svg:earth -->
 
-                <img src="assets/img/me_face.png" alt="얼굴샷" />
+              <div class="img01">
+                <div>
+                  <div class="arrow">
+                    <svg
+                      width="90"
+                      height="90"
+                      viewBox="0 0 90 90"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="2"
+                        y="2.09796"
+                        width="85.8227"
+                        height="85.8227"
+                        fill="black"
+                        stroke="#FFFF31"
+                        stroke-width="4"
+                      />
+                      <path
+                        d="M20.5989 70.7445L69.35 21.9934"
+                        stroke="#FFFF31"
+                        stroke-width="4"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                        stroke="#FFFF31"
+                        stroke-width="4"
+                        stroke-miterlimit="10"
+                      />
+                    </svg>
+                  </div>
+                  <img src="assets/img/me_face.png" alt="얼굴샷" />
+                </div>
               </div>
 
               <div class="img02">
-                <div class="img02__svg">
-                  <svg
-                    class="arrow"
-                    width="90"
-                    height="90"
-                    viewBox="0 0 90 90"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="2"
-                      y="2.09796"
-                      width="85.8227"
-                      height="85.8227"
-                      fill="black"
-                      stroke="#FFFF31"
-                      stroke-width="4"
-                    />
-                    <path
-                      d="M20.5989 70.7445L69.35 21.9934"
-                      stroke="#FFFF31"
-                      stroke-width="4"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
-                      stroke="#FFFF31"
-                      stroke-width="4"
-                      stroke-miterlimit="10"
-                    />
-                  </svg>
+                <div>
+                  <div class="arrow">
+                    <svg
+                      width="90"
+                      height="90"
+                      viewBox="0 0 90 90"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="2"
+                        y="2.09796"
+                        width="85.8227"
+                        height="85.8227"
+                        fill="black"
+                        stroke="#FFFF31"
+                        stroke-width="4"
+                      />
+                      <path
+                        d="M20.5989 70.7445L69.35 21.9934"
+                        stroke="#FFFF31"
+                        stroke-width="4"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                        stroke="#FFFF31"
+                        stroke-width="4"
+                        stroke-miterlimit="10"
+                      />
+                    </svg>
+                  </div>
+                  <img src="assets/img/me_body.png" alt="전신샷" />
                 </div>
-
-                <img src="assets/img/me_body.png" alt="전신샷" />
-                <svg
-                  width="99"
-                  height="93"
-                  viewBox="0 0 99 93"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M49.3 27.75C49.25 -0.810013 3.39999 -7.93001 3.44999 28.75C3.49999 65.43 48.4 89.87 48.4 89.87H50.4C50.4 89.87 95.21 65.33 95.16 28.61C95.11 -8.11003 49.25 -0.810013 49.3 27.75Z"
-                    stroke="#88FFA4"
-                    stroke-width="5.82"
-                    stroke-miterlimit="10"
-                  ></path>
-                </svg>
               </div>
+              <svg
+                class="heart"
+                viewBox="0 0 99 93"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M49.3 27.75C49.25 -0.810013 3.39999 -7.93001 3.44999 28.75C3.49999 65.43 48.4 89.87 48.4 89.87H50.4C50.4 89.87 95.21 65.33 95.16 28.61C95.11 -8.11003 49.25 -0.810013 49.3 27.75Z"
+                  stroke="#88FFA4"
+                  stroke-width="5.82"
+                  stroke-miterlimit="10"
+                ></path>
+              </svg>
+              <!-- //heart -->
             </div>
             <!-- //image -->
           </article>
           <!-- //me -->
 
-          <article class="skill">
+          <article class="skill clearfix">
             <div class="chart"><span class="chart_cen">html</span></div>
             <div class="chart"><span class="chart_cen">CSS</span></div>
             <div class="chart"><span class="chart_cen">vue</span></div>
