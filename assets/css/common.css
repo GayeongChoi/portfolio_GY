@@ -15,6 +15,52 @@ body {
   overflow-x: hidden;
 }
 
+/* 컨테이너 */
+.container {
+  max-width: 1400px;
+  margin: 30vh auto;
+  padding: 0 2vw;
+  width: 100%;
+}
+@media (max-width: 1220px) {
+  .container {
+  }
+}
+
+.contents {
+  padding: 20vw 2vw;
+}
+
+#contents {
+  min-height: 70vh;
+}
+.section {
+  padding: 120px 0;
+}
+.section__title {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.section__desc {
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #777;
+  margin-bottom: 80px;
+}
+.center {
+  text-align: center;
+}
+@media (max-width: 1220px) {
+  .section__title {
+    font-size: 24px;
+  }
+  .section__desc {
+    font-size: 18px;
+  }
+}
+
 /* main 헤더 */
 .header {
   width: 100vw;
