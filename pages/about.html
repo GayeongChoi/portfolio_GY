@@ -45,6 +45,7 @@
       #about .me .image {
         /* display: flex; */
         width: 100%;
+        position: relative;
       }
       #about .me .image img {
         width: 40vw;
@@ -57,10 +58,17 @@
         align-items: flex-end;
         flex-direction: column;
       }
+      #about .me .image .img02 {
+        width: 100px;
+      }
       #about .me .image .img02 > div {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        z-index: 0;
       }
 
       #about .me .image .img01 .arrow {
@@ -287,6 +295,8 @@
               </div>
               <svg
                 class="heart"
+                width="90"
+                height="90"
                 viewBox="0 0 99 93"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
