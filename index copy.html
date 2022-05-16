@@ -39,7 +39,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-bottom: 20vh;
+        margin-bottom: 10vh;
       }
       #about .me .text .title {
         color: #8cffa7;
@@ -47,6 +47,7 @@
       }
       #about .me .text .title h2 {
         font-size: 100px;
+        margin-right: 10px;
       }
       #about .me .text .int {
         width: 40%;
@@ -60,99 +61,79 @@
       #about .me .text .int p a {
         display: block;
       }
+
       /* about .me .image*/
       #about .me .image {
-        /* display: flex; */
         width: 100%;
+        height: 50vw;
+        display: flex;
+        flex-direction: row-reverse;
         position: relative;
       }
       #about .me .image img {
         width: 40vw;
-        height: 50vh;
-        min-width: 350px;
-        min-height: 230px;
+        height: 25vw;
         object-fit: cover;
         border: 7px solid #8cffa7;
       }
-      #about .me .image .img01 > div {
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
+      #about .me .image .arrow {
+        width: 10vw;
+        height: 10vw;
+        z-index: 20;
+      }
+      #about .me .image .arrow svg {
+        width: 9vw;
+        height: 9vw;
+      }
+      #about .me .image .img01 {
+        position: absolute;
+        top: 5vw;
+        right: 3vw;
+        z-index: 10;
       }
       #about .me .image .img02 {
-        width: 100px;
-        height: 17vw;
-      }
-      #about .me .image .img02 > div {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
         position: absolute;
+        bottom: 0;
         left: 0;
-        bottom: -0vw;
-        z-index: -1;
-      }
-      #about .me .image .arrow svg path,
-      rect {
-        stroke: var(--lime);
-      }
-      #about .me .image .img01 .arrow {
-        position: relative;
-      }
-      #about .me .image .img01 .arrow svg {
-        position: absolute;
-        top: -50px;
-        right: -50px;
       }
       #about .me .image .img02 .arrow {
-        position: relative;
-      }
-      #about .me .image .img02 .arrow svg {
         position: absolute;
-        top: -50px;
-        left: -50px;
+        top: -100px;
+        left: 0;
       }
       #about .me .image .earth {
-        width: 10vw;
-        height: 10vw;
-        padding-left: 10vw;
+        position: absolute;
+        top: 0;
+        left: 10vw;
+        width: 8vw;
+        height: 8vw;
       }
-      #about .me .image .heart {
-        float: right;
-        width: 10vw;
-        height: 10vw;
-        margin-right: 5vw;
+      #about .me .heart {
+        position: absolute;
+        bottom: -10vw;
+        right: 20vw;
+        width: 7vw;
+        height: 7vw;
       }
-      #about .me .image .heart svg {
-        width: 10vw;
-        padding-bottom: 10vw;
-      }
-
       /* about .skill스킬 */
       #about .skill {
-        margin-top: 20vw;
-      }
-      #about .skill .skill__inner {
-        text-align: center;
         display: flex;
         justify-content: space-around;
-        flex-wrap: wrap;
+        margin-top: 100px;
       }
       #about .skill .chart {
         position: relative;
-        /* min-width: 200px; */
-        width: 10vw;
-        height: 10vw;
+        min-width: 200px;
+        width: 200px;
+        height: 200px;
         background: conic-gradient(var(--black) 90deg, var(--lime) 50deg);
         border-radius: 50%;
-        margin: 10px;
-        text-align: center;
+        margin: 5px;
       }
       #about .skill .chart span {
-        text-align: center;
-        font-size: 1.9vw;
+        font-size: 40px;
         text-transform: uppercase;
-        line-height: 4.9;
+        line-height: 180px;
         text-align: center;
         position: absolute;
         left: 50%;
@@ -252,10 +233,6 @@
         width: 70px;
         height: 70px;
       }
-      #work .workType01 .view svg path,
-      rect {
-        stroke: var(--yellow);
-      }
     </style>
   </head>
   <body>
@@ -327,8 +304,6 @@
             <div class="image">
               <svg
                 class="earth"
-                width="50"
-                hight=""
                 viewBox="0 0 98 98"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -365,88 +340,47 @@
                 ></path>
               </svg>
               <!-- //svg:earth -->
+              <div class="arrow mr100">
+                <svg
+                  width="90"
+                  height="90"
+                  viewBox="0 0 90 90"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2"
+                    y="2.09796"
+                    width="85.8227"
+                    height="85.8227"
+                    fill="black"
+                    stroke="#FFFF31"
+                    stroke-width="4"
+                  />
+                  <path
+                    d="M20.5989 70.7445L69.35 21.9934"
+                    stroke="#FFFF31"
+                    stroke-width="4"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                    stroke="#FFFF31"
+                    stroke-width="4"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+              </div>
 
               <div class="img01">
-                <div>
-                  <div class="arrow">
-                    <svg
-                      width="90"
-                      height="90"
-                      viewBox="0 0 90 90"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        x="2"
-                        y="2.09796"
-                        width="85.8227"
-                        height="85.8227"
-                        fill="black"
-                        stroke="#FFFF31"
-                        stroke-width="4"
-                      />
-                      <path
-                        d="M20.5989 70.7445L69.35 21.9934"
-                        stroke="#FFFF31"
-                        stroke-width="4"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
-                        stroke="#FFFF31"
-                        stroke-width="4"
-                        stroke-miterlimit="10"
-                      />
-                    </svg>
-                  </div>
-                  <img src="assets/img/me_face.png" alt="얼굴샷" />
-                </div>
-              </div>
-
-              <div class="img02 clearfix">
-                <div>
-                  <div class="arrow">
-                    <svg
-                      width="90"
-                      height="90"
-                      viewBox="0 0 90 90"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        x="2"
-                        y="2.09796"
-                        width="85.8227"
-                        height="85.8227"
-                        fill="black"
-                        stroke="#FFFF31"
-                        stroke-width="4"
-                      />
-                      <path
-                        d="M20.5989 70.7445L69.35 21.9934"
-                        stroke="#FFFF31"
-                        stroke-width="4"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
-                        stroke="#FFFF31"
-                        stroke-width="4"
-                        stroke-miterlimit="10"
-                      />
-                    </svg>
-                  </div>
-                  <img src="assets/img/me_body.png" alt="전신샷" />
-                </div>
-              </div>
-              <div class="heart">
+                <img src="assets/img/me_face.png" alt="얼굴샷" />
                 <svg
+                  class="heart"
                   viewBox="0 0 99 93"
-                  fill="var(--black)"
+                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill="var(--black)"
                     d="M49.3 27.75C49.25 -0.810013 3.39999 -7.93001 3.44999 28.75C3.49999 65.43 48.4 89.87 48.4 89.87H50.4C50.4 89.87 95.21 65.33 95.16 28.61C95.11 -8.11003 49.25 -0.810013 49.3 27.75Z"
                     stroke="#88FFA4"
                     stroke-width="5.82"
@@ -454,21 +388,53 @@
                   ></path>
                 </svg>
               </div>
-              <!-- //heart -->
+
+              <div class="img02">
+                <div class="arrow">
+                  <svg
+                    width="90"
+                    height="90"
+                    viewBox="0 0 90 90"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="2"
+                      y="2.09796"
+                      width="85.8227"
+                      height="85.8227"
+                      fill="black"
+                      stroke="#FFFF31"
+                      stroke-width="4"
+                    />
+                    <path
+                      d="M20.5989 70.7445L69.35 21.9934"
+                      stroke="#FFFF31"
+                      stroke-width="4"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                      stroke="#FFFF31"
+                      stroke-width="4"
+                      stroke-miterlimit="10"
+                    />
+                  </svg>
+                </div>
+                <img src="assets/img/me_body.png" alt="전신샷" class="ml50" />
+              </div>
             </div>
             <!-- //image -->
           </article>
           <!-- //me -->
 
           <article class="skill">
-            <div class="skill__inner">
-              <div class="chart"><span class="chart_cen">html</span></div>
-              <div class="chart"><span class="chart_cen">CSS</span></div>
-              <div class="chart"><span class="chart_cen">vue</span></div>
-              <div class="chart"><span class="chart_cen">react</span></div>
-              <div class="chart"><span class="chart_cen">js</span></div>
-              <div class="chart"><span class="chart_cen">php</span></div>
-            </div>
+            <div class="chart"><span class="chart_cen">html</span></div>
+            <div class="chart"><span class="chart_cen">CSS</span></div>
+            <div class="chart"><span class="chart_cen">vue</span></div>
+            <div class="chart"><span class="chart_cen">react</span></div>
+            <div class="chart"><span class="chart_cen">js</span></div>
+            <div class="chart"><span class="chart_cen">php</span></div>
           </article>
           <!-- //skill -->
         </div>
