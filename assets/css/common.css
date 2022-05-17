@@ -9,8 +9,9 @@
   --green: #e1ff31;
 }
 
-/* 바디 색상 */
+/* 바디 색상(배경색)*/
 body {
+  padding: 10%;
   background: #000;
   overflow-x: hidden;
 }
@@ -19,18 +20,12 @@ body {
 .container {
   max-width: 1400px;
   margin: 30vh auto;
-  padding: 0 2vw;
+  padding: 0 3vw;
   width: 100%;
 }
-@media (max-width: 1220px) {
-  .container {
-  }
-}
-
 .contents {
   padding: 20vw 2vw;
 }
-
 #contents {
   min-height: 70vh;
 }

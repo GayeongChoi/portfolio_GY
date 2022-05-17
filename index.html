@@ -42,90 +42,151 @@
         margin-bottom: 20vh;
       }
       #about .me .text .title {
+        width: 50%;
         color: #8cffa7;
         margin-right: 10px;
       }
-      #about .me .text .title h2 {
-        font-size: 100px;
+      #about .me .text .title h1 {
+        width: 100%;
+        font-size: 90px;
       }
       #about .me .text .int {
-        width: 40%;
+        width: 45%;
         min-width: 500px;
       }
       #about .me .text .int p {
-        font-size: 100%;
+        font-size: 20px;
         font-family: "ChosunNm";
         line-height: 2;
       }
       #about .me .text .int p a {
         display: block;
       }
+      @media (max-width: 1300px) {
+        #about .me .text {
+          width: 100%;
+          padding: 1%;
+        }
+        #about .me .text .title {
+          width: 100%;
+        }
+        #about .me .text .title h1 {
+          font-size: 7vw;
+        }
+        #about .me .text .int {
+          width: 65vw;
+        }
+      }
+      @media (max-width: 800px) {
+        #about .me .text {
+          padding-left: 20px;
+        }
+        #about .me .text .int p {
+          width: 80vw;
+        }
+        #about .me .text .int p {
+          font-size: 2.5vw;
+        }
+      }
+
       /* about .me .image*/
       #about .me .image {
-        /* display: flex; */
         width: 100%;
         position: relative;
       }
       #about .me .image img {
-        width: 40vw;
-        height: 50vh;
-        min-width: 350px;
-        min-height: 230px;
         object-fit: cover;
         border: 7px solid #8cffa7;
+      }
+
+      /* img01 */
+      #about .me .image .img01 {
+        display: flex;
+        justify-content: flex-end;
       }
       #about .me .image .img01 > div {
         display: flex;
         align-items: flex-end;
         flex-direction: column;
+        position: relative;
+        padding: 40px 0 0 40px;
       }
-      #about .me .image .img02 {
-        width: 100px;
-        height: 17vw;
+      #about .me .image .img01 > div > img {
+        width: 640px;
+        height: 410px;
       }
-      #about .me .image .img02 > div {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
+      #about .me .image .img01 > div > .arrow {
         position: absolute;
-        left: 0;
-        bottom: -0vw;
+        top: 0;
+        left: 15%;
+        transform: rotate(-45deg);
+      }
+
+      /*img02  */
+      #about .me .image .img02 {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        top: 40%;
+        left: 10%;
         z-index: -1;
       }
-      #about .me .image .arrow svg path,
-      rect {
-        stroke: var(--lime);
-      }
-      #about .me .image .img01 .arrow {
+      #about .me .image .img02 > div {
+        height: 850px;
+        display: flex;
         position: relative;
+        padding: 20px 0 0 20px;
       }
-      #about .me .image .img01 .arrow svg {
+      #about .me .image .img02 > div > img {
+        width: 680px;
+        height: 360px;
+      }
+      #about .me .image .img02 > div > .arrow {
         position: absolute;
-        top: -50px;
-        right: -50px;
+        top: 0;
+        left: 0;
       }
-      #about .me .image .img02 .arrow {
-        position: relative;
+      #about .me .image .img02 .heart {
+        width: 200px;
+        margin-left: 10%;
       }
-      #about .me .image .img02 .arrow svg {
-        position: absolute;
-        top: -50px;
-        left: -50px;
+      @media (max-width: 1300px) {
+        #about .me .image {
+          margin-bottom: calc(100% - 40%);
+        }
+        #about .me .image .img02 {
+          top: calc(100% - 10%);
+          left: 0;
+        }
       }
-      #about .me .image .earth {
-        width: 10vw;
-        height: 10vw;
-        padding-left: 10vw;
-      }
-      #about .me .image .heart {
-        float: right;
-        width: 10vw;
-        height: 10vw;
-        margin-right: 5vw;
-      }
-      #about .me .image .heart svg {
-        width: 10vw;
-        padding-bottom: 10vw;
+      @media (max-width: 800px) {
+        #about .me .image img {
+          border: 3px solid #8cffa7;
+        }
+        #about .me .image .img01 > div {
+          height: 65vw;
+          padding: 5vw 0 0 10vw;
+        }
+        #about .me .image .img01 > div > img {
+          width: 80vw;
+          height: 50vw;
+        }
+        #about .me .image .img02 {
+          position: relative;
+          top: calc(100% - 10%);
+          margin-top: 2%;
+        }
+        #about .me .image .img02 > div {
+          height: 10vw;
+        }
+        #about .me .image .img02 > div > img {
+          width: 80vw;
+          height: 50vw;
+        }
+        #about .me .image .arrow svg {
+          width: 20vw;
+          height: 10vw;
+        }
       }
 
       /* about .skill스킬 */
@@ -141,16 +202,16 @@
       #about .skill .chart {
         position: relative;
         /* min-width: 200px; */
-        width: 10vw;
-        height: 10vw;
+        width: 180px;
+        height: 180px;
         background: conic-gradient(var(--black) 90deg, var(--lime) 50deg);
         border-radius: 50%;
-        margin: 10px;
+        margin: 1%;
         text-align: center;
       }
       #about .skill .chart span {
         text-align: center;
-        font-size: 1.9vw;
+        font-size: 35px;
         text-transform: uppercase;
         line-height: 4.9;
         text-align: center;
@@ -162,6 +223,20 @@
         border-radius: 50%;
         width: 88%;
         height: 88%;
+      }
+      @media (max-width: 1300px) {
+        #about .skill .chart {
+          margin-top: 30px;
+        }
+      }
+      @media (max-width: 800px) {
+        #about .skill .chart {
+          width: 30vw;
+          height: 30vw;
+        }
+        #about .skill .chart span {
+          font-size: 5.5vw;
+        }
       }
 
       /* work */
@@ -182,7 +257,7 @@
         z-index: 0;
       }
       #work .workType01 .work__img .bar {
-        height: 10%;
+        height: 3%;
         min-height: 50px;
         border-bottom: 5px solid var(--yellow);
 
@@ -193,7 +268,7 @@
         font-size: 25px;
       }
       #work .workType01 .work__img img {
-        height: 90%;
+        height: 95%;
         object-fit: cover;
       }
       #work .workType01 .work__bottom {
@@ -252,10 +327,6 @@
         width: 70px;
         height: 70px;
       }
-      #work .workType01 .view svg path,
-      rect {
-        stroke: var(--yellow);
-      }
     </style>
   </head>
   <body>
@@ -271,14 +342,14 @@
         <div class="container">
           <article class="me">
             <div class="text">
-              <div class="title">
-                <h2>
+              <span class="title">
+                <h1>
                   I AM <br />
                   DEVELOPER
-                </h2>
-              </div>
+                </h1>
+              </span>
               <!-- //title -->
-              <div class="int">
+              <span class="int">
                 <p>
                   안녕하세요, 프론트엔드의 매력은 상상하는 것을 실현하는
                   것이라고 생각합니다. 자기가 상상한것을 실현시키기 위해서는
@@ -320,53 +391,56 @@
                     </svg>
                   </a>
                 </p>
-              </div>
+              </span>
             </div>
             <!-- //text -->
 
             <div class="image">
-              <svg
-                class="earth"
-                width="50"
-                hight=""
-                viewBox="0 0 98 98"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.14999 49.07H94.3"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
-                  stroke-miterlimit="10"
-                ></path>
-                <path
-                  d="M94.3099 49.07C94.3099 58.0849 91.6368 66.8973 86.6284 74.3929C81.62 81.8885 74.5013 87.7306 66.1727 91.1804C57.844 94.6303 48.6794 95.5329 39.8378 93.7742C30.9961 92.0155 22.8745 87.6744 16.5001 81.2999C10.1256 74.9255 5.78448 66.8039 4.02576 57.9622C2.26705 49.1206 3.16967 39.9559 6.61951 31.6273C10.0694 23.2986 15.9115 16.18 23.4071 11.1716C30.9027 6.16324 39.7151 3.49 48.73 3.49C54.7156 3.49 60.6427 4.66893 66.1727 6.95954C71.7027 9.25015 76.7274 12.6076 80.9599 16.8401C85.1924 21.0726 88.5498 26.0972 90.8404 31.6273C93.131 37.1573 94.3099 43.0844 94.3099 49.07V49.07Z"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
-                  stroke-miterlimit="10"
-                ></path>
-                <path
-                  d="M70.6 49.07C70.6 74.24 60.81 94.64 48.73 94.64C36.65 94.64 26.87 74.24 26.87 49.07C26.87 23.9 36.66 3.49 48.73 3.49C60.8 3.49 70.6 23.9 70.6 49.07Z"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
-                  stroke-miterlimit="10"
-                ></path>
-                <path
-                  d="M48.73 3.49V94.64"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
-                  stroke-miterlimit="10"
-                ></path>
-                <path
-                  d="M94.31 49.07C94.31 60.59 73.9 69.94 48.73 69.94C23.56 69.94 3.16 60.59 3.16 49.07C3.16 37.55 23.56 28.19 48.73 28.19C73.9 28.19 94.31 37.54 94.31 49.07Z"
-                  stroke="#88FFA4"
-                  stroke-width="5.82"
-                  stroke-miterlimit="10"
-                ></path>
-              </svg>
-              <!-- //svg:earth -->
-
               <div class="img01">
+                <svg
+                  class="earth mr100"
+                  width="115"
+                  height="115"
+                  viewBox="0 0 98 98"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M94.3099 49.07C94.3099 58.0849 91.6368 66.8973 86.6284 74.3929C81.62 81.8885 74.5013 87.7306 66.1727 91.1804C57.844 94.6303 48.6794 95.5329 39.8378 93.7742C30.9961 92.0155 22.8745 87.6744 16.5001 81.2999C10.1256 74.9255 5.78448 66.8039 4.02576 57.9622C2.26705 49.1206 3.16967 39.9559 6.61951 31.6273C10.0694 23.2986 15.9115 16.18 23.4071 11.1716C30.9027 6.16324 39.7151 3.49 48.73 3.49C54.7156 3.49 60.6427 4.66893 66.1727 6.95954C71.7027 9.25015 76.7274 12.6076 80.9599 16.8401C85.1924 21.0726 88.5498 26.0972 90.8404 31.6273C93.131 37.1573 94.3099 43.0844 94.3099 49.07V49.07Z"
+                    stroke="#88FFA4"
+                    stroke-width="5.82"
+                    stroke-miterlimit="10"
+                    fill="black"
+                    alt="맨뒤 테두리, 배경색o"
+                  ></path>
+                  <path
+                    d="M3.14999 49.07H94.3"
+                    stroke="#88FFA4"
+                    stroke-width="5.82"
+                    stroke-miterlimit="10"
+                    fill="black"
+                    z-in
+                  ></path>
+                  <path
+                    d="M70.6 49.07C70.6 74.24 60.81 94.64 48.73 94.64C36.65 94.64 26.87 74.24 26.87 49.07C26.87 23.9 36.66 3.49 48.73 3.49C60.8 3.49 70.6 23.9 70.6 49.07Z"
+                    stroke="#88FFA4"
+                    stroke-width="5.82"
+                    stroke-miterlimit="10"
+                  ></path>
+                  <path
+                    d="M48.73 3.49V94.64"
+                    stroke="#88FFA4"
+                    stroke-width="5.82"
+                    stroke-miterlimit="10"
+                  ></path>
+                  <path
+                    d="M94.31 49.07C94.31 60.59 73.9 69.94 48.73 69.94C23.56 69.94 3.16 60.59 3.16 49.07C3.16 37.55 23.56 28.19 48.73 28.19C73.9 28.19 94.31 37.54 94.31 49.07Z"
+                    stroke="#88FFA4"
+                    stroke-width="5.82"
+                    stroke-miterlimit="10"
+                  ></path>
+                </svg>
+                <!-- //svg:earth -->
                 <div>
                   <div class="arrow">
                     <svg
@@ -382,18 +456,18 @@
                         width="85.8227"
                         height="85.8227"
                         fill="black"
-                        stroke="#FFFF31"
+                        stroke="#8cffa7"
                         stroke-width="4"
                       />
                       <path
                         d="M20.5989 70.7445L69.35 21.9934"
-                        stroke="#FFFF31"
+                        stroke="var(--lime)"
                         stroke-width="4"
                         stroke-miterlimit="10"
                       />
                       <path
                         d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
-                        stroke="#FFFF31"
+                        stroke="var(--lime)"
                         stroke-width="4"
                         stroke-miterlimit="10"
                       />
@@ -419,18 +493,18 @@
                         width="85.8227"
                         height="85.8227"
                         fill="black"
-                        stroke="#FFFF31"
+                        stroke="#8cffa7"
                         stroke-width="4"
                       />
                       <path
                         d="M20.5989 70.7445L69.35 21.9934"
-                        stroke="#FFFF31"
+                        stroke="var(--lime)"
                         stroke-width="4"
                         stroke-miterlimit="10"
                       />
                       <path
                         d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
-                        stroke="#FFFF31"
+                        stroke="var(--lime)"
                         stroke-width="4"
                         stroke-miterlimit="10"
                       />
@@ -438,23 +512,23 @@
                   </div>
                   <img src="assets/img/me_body.png" alt="전신샷" />
                 </div>
-              </div>
-              <div class="heart">
-                <svg
-                  viewBox="0 0 99 93"
-                  fill="var(--black)"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
+                <div class="heart">
+                  <svg
+                    viewBox="0 0 99 93"
                     fill="var(--black)"
-                    d="M49.3 27.75C49.25 -0.810013 3.39999 -7.93001 3.44999 28.75C3.49999 65.43 48.4 89.87 48.4 89.87H50.4C50.4 89.87 95.21 65.33 95.16 28.61C95.11 -8.11003 49.25 -0.810013 49.3 27.75Z"
-                    stroke="#88FFA4"
-                    stroke-width="5.82"
-                    stroke-miterlimit="10"
-                  ></path>
-                </svg>
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="var(--black)"
+                      d="M49.3 27.75C49.25 -0.810013 3.39999 -7.93001 3.44999 28.75C3.49999 65.43 48.4 89.87 48.4 89.87H50.4C50.4 89.87 95.21 65.33 95.16 28.61C95.11 -8.11003 49.25 -0.810013 49.3 27.75Z"
+                      stroke="#88FFA4"
+                      stroke-width="5.82"
+                      stroke-miterlimit="10"
+                    ></path>
+                  </svg>
+                </div>
+                <!-- //heart -->
               </div>
-              <!-- //heart -->
             </div>
             <!-- //image -->
           </article>
