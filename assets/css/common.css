@@ -13,7 +13,7 @@
 /* 바디 색상(배경색)*/
 body {
   padding: 10%;
-  background: #000;
+  background: var(--black);
   overflow-x: hidden;
 }
 
@@ -25,13 +25,38 @@ body {
   grid-gap: 10px;
 }
 
-/* 컨테이너 */
+/* 컨테이너 - 기타는 밑에*/
 .container {
-  max-width: 1400px;
+  max-width: 1350px;
   margin: 30vh auto;
-  padding: 0 3vw;
-  width: 100%;
+  padding: 0 2vw;
+  width: 100vw;
 }
+
+/* main 헤더 */
+.header {
+  width: 100vw;
+  height: 20vw;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(116, 214, 139, 0.7),
+    var(--green) 100%
+  );
+
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 20vw;
+  font-size: 6vw;
+  font-weight: 700;
+}
+
+/* svg 크기 */
+.arrow {
+  width: 60px;
+  height: 60px;
+}
+
 .contents {
   padding: 20vw 2vw;
 }
@@ -63,21 +88,4 @@ body {
   .section__desc {
     font-size: 18px;
   }
-}
-
-/* main 헤더 */
-.header {
-  width: 100vw;
-  height: 20vw;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(116, 214, 139, 0.7),
-    var(--green) 100%
-  );
-
-  text-align: center;
-  line-height: 20vw;
-  font-size: 6vw;
-  font-weight: 700;
 }

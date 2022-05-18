@@ -1,1 +1,726 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <meta
+      name="google-site-verification"
+      content="s4KoZ36gRsSO4rC23-fUts5MGzLDpOvljWOwjVNSjGg"
+    />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#8DFFA8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="/assets/studiofeixensansedgytrial-regular-webfont.584d8b9a.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/studiofeixensansedgytrial-medium-webfont.49f090a1.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/studiofeixensansedgytrial-bold-webfont.0b04eaa6.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/StudioFeixenSans-Regular.83774609.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/StudioFeixenSans-Medium.db70acf2.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/StudioFeixenSans-Bold.272f2ecc.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/assets/StudioFeixenSans-Book.5d7370a8.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <title data-vm-ssr="true">Studio 9P — Production digitale</title>
+    <meta
+      name="description"
+      content="Nous sommes un studio qui conçoit et réalise des aventures  pour le web. Nous sommes  studio 9p."
+      data-vm-ssr="true"
+    />
+    <meta
+      property="og:title"
+      content="Studio 9P — Production digitale"
+      data-vm-ssr="true"
+    />
+    <meta property="og:sitename" content="Studio 9p" data-vm-ssr="true" />
+    <meta
+      property="og:url"
+      content="https://studio9p.com//"
+      data-vm-ssr="true"
+    />
+    <meta property="og:type" content="website" data-vm-ssr="true" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/neuvieme-page/image/upload/v1644937258/studio-9p/meta.png"
+      data-vm-ssr="true"
+    />
+    <meta
+      property="og:description"
+      content="Nous sommes un studio qui conçoit et réalise des aventures  pour le web. Nous sommes  studio 9p."
+      data-vm-ssr="true"
+    />
+    <!---->
+    <style>
+      @font-face {
+        font-family: StudioFeixenSans;
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/assets/StudioFeixenSans-Regular.83774609.woff2)
+            format("woff2"),
+          url(/assets/StudioFeixenSans-Regular.becef7fa.woff) format("woff"),
+          url(/assets/StudioFeixenSans-Regular.59683df9.ttf) format("truetype"),
+          url(/assets/StudioFeixenSans-Regular.5246d78f.otf) format("opentype");
+      }
 
+      @font-face {
+        font-family: StudioFeixenSans;
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(/assets/StudioFeixenSans-Medium.db70acf2.woff2) format("woff2"),
+          url(/assets/StudioFeixenSans-Medium.fc61724b.woff) format("woff"),
+          url(/assets/StudioFeixenSans-Medium.9a8ebcf8.ttf) format("truetype"),
+          url(/assets/StudioFeixenSans-Medium.152e4838.otf) format("opentype");
+      }
+
+      @font-face {
+        font-family: StudioFeixenSans;
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(/assets/StudioFeixenSans-Bold.272f2ecc.woff2) format("woff2"),
+          url(/assets/StudioFeixenSans-Bold.d876c0a0.woff) format("woff"),
+          url(/assets/StudioFeixenSans-Bold.d3ddb61e.ttf) format("truetype"),
+          url(/assets/StudioFeixenSans-Bold.f784a396.otf) format("opentype");
+      }
+
+      @font-face {
+        font-family: StudioFeixenSans;
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(/assets/StudioFeixenSans-Book.5d7370a8.woff2) format("woff2"),
+          url(/assets/StudioFeixenSans-Book.378f0787.woff) format("woff"),
+          url(/assets/StudioFeixenSans-Book.d7240482.ttf) format("truetype"),
+          url(/assets/StudioFeixenSans-Book.ebd05d3e.otf) format("opentype");
+      }
+
+      .cursor {
+        z-index: 999;
+        position: fixed;
+        top: var(--y);
+        left: var(--x);
+        width: var(--size);
+        height: var(--size);
+        transform: translate(-50%, -50%);
+      }
+
+      .cursor--auto {
+        transform-origin: 0% 0%;
+        transform: translate(-6%, -6%);
+        animation: 0.5s forwards pointerRotate;
+      }
+
+      @keyframes pointerRotate {
+        0% {
+          transform: translate(-6%, -6%) rotate(30deg);
+        }
+
+        to {
+          transform: translate(-6%, -6%) rotate(0);
+        }
+      }
+
+      .link {
+        font-family: StudioFeixenSans, sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.045em;
+      }
+
+      .link {
+        text-decoration: underline;
+        text-transform: uppercase;
+        display: inline-table;
+        vertical-align: middle;
+        transform: translateY(50px);
+        opacity: 0;
+        will-change: transform, opacity, color;
+      }
+
+      .link__arrowIcon {
+        margin-left: 5px;
+        display: inline-block;
+      }
+
+      .splitedText br {
+        display: block;
+        margin-top: 20px;
+      }
+
+      h1[data-v-229df1f8] {
+        font-family: StudioFeixenSans, sans-serif;
+        font-size: 120px;
+        line-height: 90px;
+        letter-spacing: -0.045em;
+      }
+
+      .title[data-v-229df1f8] {
+        line-height: 0.9;
+        font-weight: 700;
+        color: var(--color);
+        z-index: 2;
+        position: relative;
+      }
+
+      @media (max-width: 1023px) {
+        h1[data-v-229df1f8] {
+          font-size: 65px;
+        }
+      }
+
+      .paragraph .icon-svg svg {
+        width: 25px;
+        height: 25px;
+      }
+
+      .image:not(.image--loaded) > :first-child {
+        visibility: hidden;
+      }
+
+      .image img,
+      .image picture {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+
+      .image.image--cover picture img {
+        object-fit: cover;
+      }
+
+      .icon-svg {
+        position: relative;
+        display: inline-block;
+        width: 31px;
+        height: 10px;
+      }
+
+      .icon-svg svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .aboutSection[data-v-07bd263c] {
+        padding: var(--border-padding);
+        text-align: left;
+        --column-gap: 10px;
+        position: relative;
+      }
+
+      .aboutSection--beforeGradient[data-v-07bd263c]:before {
+        width: 100vw;
+        height: 20vh;
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0) 0,
+          #000 95%,
+          #000 100%
+        );
+        content: "";
+        display: block;
+        position: absolute;
+        top: 1px;
+        left: 50%;
+        transform: translate(-50%) translateY(-100%);
+      }
+
+      .aboutSection__bottom[data-v-07bd263c] {
+        grid-column: span 13;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 767px) {
+        .aboutSection--beforeGradient[data-v-07bd263c]:before {
+          height: 10vh;
+        }
+
+        .aboutSection[data-v-07bd263c] {
+          padding: 70px var(--border-padding);
+        }
+
+        .aboutSection__bottom[data-v-07bd263c] {
+          grid-column: span 6;
+        }
+      }
+
+      .aboutSection__bottomLeft[data-v-07bd263c] {
+        grid-column: span 6;
+        margin-top: -45px;
+        max-width: 100%;
+      }
+
+      @media (max-width: 1024px) {
+        .aboutSection__bottom[data-v-07bd263c] {
+          grid-column: span 6;
+        }
+
+        .aboutSection__bottomLeft[data-v-07bd263c] {
+          grid-column: span 5;
+          margin-top: -25px;
+        }
+      }
+
+      .aboutSection__topLeft[data-v-07bd263c] {
+        grid-column: span 6;
+        text-transform: uppercase;
+      }
+
+      .aboutSection__topRight[data-v-07bd263c] {
+        grid-column: 7/13;
+        padding-left: 40px;
+      }
+
+      @media (max-width: 767px) {
+        .aboutSection__topRight[data-v-07bd263c] {
+          margin-top: 70px;
+          padding-left: 0;
+        }
+
+        .teamSection .title[data-v-07bd263c] {
+          font-size: 15vw;
+        }
+      }
+
+      .aboutSection__more[data-v-07bd263c] {
+        margin-top: 95px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .aboutSection__more[data-v-07bd263c] {
+        display: block;
+      }
+
+      @media (max-width: 1024px) {
+        .aboutSection__topRight[data-v-07bd263c] {
+          grid-column: 1/7;
+        }
+
+        .aboutSection__more[data-v-07bd263c] {
+          margin-bottom: 70px;
+        }
+      }
+
+      .sectionSeparator[data-v-07bd263c] {
+        width: 100vw;
+      }
+
+      #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      :root {
+        --c-white: white;
+        --c-black: black;
+        --c-grey: #d8d8d8;
+        --c-yellow: #e1ff31;
+        --c-green: #8dffa8;
+        --c-brown: #a19e81;
+      }
+
+      .e-feixensans-body {
+        font-family: StudioFeixenSans, sans-serif;
+        font-size: 17px;
+        line-height: 30px;
+        letter-spacing: 0;
+      }
+
+      :root {
+        --border-padding: 87px;
+      }
+
+      @media (min-width: 1025px) {
+        :root {
+          --content-max-width: 1300px;
+          --border-padding: 115px;
+        }
+      }
+
+      @media (min-width: 1360px) {
+        :root {
+          --content-max-width: 1300px;
+          --border-padding: 120px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --border-padding: 28px;
+        }
+      }
+
+      a,
+      body,
+      div,
+      h1,
+      html,
+      img,
+      p,
+      span {
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+      }
+
+      body {
+        line-height: 1;
+      }
+
+      .u-uppercase {
+        text-transform: uppercase;
+      }
+
+      .u-hidden {
+        visibility: hidden;
+      }
+
+      .imageShutter > :first-child:after {
+        background-color: var(--image-shutter-background);
+        content: "";
+        display: block;
+        height: 99%;
+        width: 99.5%;
+        position: absolute;
+        transform-origin: center top;
+        transform: scaleY(var(--after-scale-y));
+        top: 0;
+        left: 0.25%;
+        z-index: 0;
+        will-change: transform;
+      }
+
+      .imageShutter picture {
+        overflow: hidden;
+        position: relative;
+        transform: translateY(var(--picture-translate-y));
+        z-index: 1;
+      }
+
+      .imageShutter img {
+        transform: translateY(var(--image-translate-y));
+      }
+
+      :root {
+        --column-count: 6;
+        --column-gap: 30px;
+        --column-width: calc(
+          (
+              min(100vw, var(--content-max-width)) -
+                (var(--column-count) * var(--column-gap))
+            ) / var(--column-count)
+        );
+      }
+
+      @media (min-width: 768px) {
+        :root {
+          --column-count: 8;
+        }
+      }
+
+      @media (min-width: 1025px) {
+        :root {
+          --column-count: 12;
+        }
+      }
+
+      .o-grid {
+        column-gap: var(--column-gap);
+        display: grid;
+        grid-template-columns: repeat(var(--column-count), 1fr);
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1350px;
+      }
+
+      .o-cardGrid {
+        margin: 140px auto;
+        display: grid;
+        grid-template-columns: repeat(var(--column-count), 1fr);
+        --gap: var(--column-gap);
+        max-width: var(--content-max-width);
+        gap: var(--gap);
+        grid-auto-rows: minmax(90px, 395px);
+      }
+
+      @media (max-width: 767px) {
+        .o-cardGrid {
+          margin: 90px auto;
+          grid-auto-rows: minmax(90px, 280px);
+        }
+      }
+
+      *,
+      :after,
+      :before {
+        box-sizing: inherit;
+      }
+
+      body,
+      html {
+        width: 100%;
+      }
+
+      html {
+        box-sizing: border-box;
+        height: 100%;
+      }
+
+      body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+        -webkit-text-size-adjust: 100%;
+        background-color: var(--c-black);
+        overflow: hidden;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: unset;
+      }
+
+      :root {
+        --swiper-theme-color: #007aff;
+      }
+
+      :root {
+        --swiper-navigation-size: 44px;
+      }
+    </style>
+    <script
+      type="module"
+      crossorigin=""
+      src="/assets/index.981cc730.js"
+    ></script>
+    <link rel="modulepreload" href="/assets/vendor.1e7a9723.js" />
+    <link
+      rel="stylesheet"
+      href="/assets/index.7227b8ed.css"
+      media="print"
+      onload="this.media='all'"
+    />
+  </head>
+
+  <body>
+    <div>
+      <div class="o-cardGrid" data-v-07bd263c>
+        <div
+          class="cardContainerSize"
+          style="opacity: 1; transform: translate(0px, 0px)"
+        >
+          <a href="/en/work/le-fooding" class="workCardContainer left"
+            ><div
+              class="magnetDiv workCard"
+              style="
+                --x: -0.326448%;
+                --y: -1.60446%;
+                border: 3px solid rgb(255, 255, 49);
+              "
+            >
+              <div
+                class="workCardArrow__square"
+                style="
+                  border: 2.5px solid rgb(255, 255, 49);
+                  opacity: 1;
+                  transform: rotate(15deg);
+                "
+              >
+                <svg
+                  width="44"
+                  height="44"
+                  viewBox="0 0 18 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="workCardArrow__arrow"
+                >
+                  <path
+                    d="M0 7.2124H15.6"
+                    stroke="#FFFF31FF"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                  ></path>
+                  <path
+                    d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                    stroke="#FFFF31FF"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                class="workCard__name"
+                style="border-bottom: 3px solid rgb(255, 255, 49)"
+              >
+                Le Fooding
+              </div>
+              <div
+                class="workCard__image"
+                style="opacity: 1; transform: translate(0px, 0px)"
+              >
+                <img
+                  src="https://res.cloudinary.com/neuvieme-page/image/upload/w_800,q_auto:good,f_auto/v1644400347/studio-9p/uploads/image-cover-fooding.jpg"
+                  alt="Miniature Le Fooding"
+                  loading="lazy"
+                />
+              </div></div
+          ></a>
+        </div>
+        <div
+          class="cardContainerSize"
+          style="opacity: 1; transform: translate(0px, 0px)"
+        >
+          <a href="/en/work/club-mate" class="workCardContainer left"
+            ><div
+              class="magnetDiv workCard"
+              style="
+                --x: 8.7115%;
+                --y: 12.2493%;
+                border: 3px solid rgb(141, 255, 162);
+              "
+            >
+              <div
+                class="workCardArrow__square"
+                style="
+                  border: 2.5px solid rgb(141, 255, 162);
+                  opacity: 1;
+                  transform: rotate(15deg);
+                "
+              >
+                <svg
+                  width="44"
+                  height="44"
+                  viewBox="0 0 18 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="workCardArrow__arrow"
+                >
+                  <path
+                    d="M0 7.2124H15.6"
+                    stroke="#8DFFA2"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                  ></path>
+                  <path
+                    d="M9.8999 1L16.0999 7.21289L9.8999 13.4258"
+                    stroke="#8DFFA2"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                class="workCard__name"
+                style="border-bottom: 3px solid rgb(141, 255, 162)"
+              >
+                Club-Mate
+              </div>
+              <div
+                class="workCard__image"
+                style="opacity: 1; transform: translate(0px, 0px)"
+              >
+                <img
+                  src="https://res.cloudinary.com/neuvieme-page/image/upload/w_800,q_auto:good,f_auto/v1644423624/studio-9p/Cover_Image_Club_Mate.jpg"
+                  alt="Miniature Club-Mate"
+                  loading="lazy"
+                />
+              </div></div
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.body.querySelector("#app").innerHTML = "";
+    </script>
+
+    <noscript>
+      <link rel="stylesheet" href="/assets/index.7227b8ed.css"
+    /></noscript>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-12896855-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-12896855-1");
+    </script>
+  </body>
+</html>

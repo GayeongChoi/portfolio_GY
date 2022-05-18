@@ -10,382 +10,75 @@
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <style>
-      #home {
-        background: linear-gradient(to bottom, #e4ff31, #8cffa7);
+      /* script */
+      .scrip__inner {
+        margin: 30vh auto;
+      }
+      .scripType {
         width: 100vw;
-        height: 100vh;
+        color: var(--lime);
+        margin-bottom: 30vh;
+      }
+      .scripType > .scrip__img {
+        height: 30vw;
+        min-height: 500px;
+      }
+      .scripType > .scrip__img.img01 {
+        background: url(./assets/img/script_music.png) center no-repeat;
+      }
+      .scripType > .scrip__img.img02 {
+        background: url(./assets/img/script_card.png) center no-repeat;
+      }
+      .scripType > .scrip__img.img03 {
+        background: url(./assets/img/script_typing.png) center no-repeat;
+      }
+      .scripType > .scrip__img.img04 {
+        background: url(./assets/img/script_tetris.png) center no-repeat;
+      }
+      .scripType > .container {
+        margin: 0 auto;
+        position: relative;
+      }
+      .scripType .siteView {
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-      #home h1 {
-        color: #000;
-        text-align: center;
-        font-size: 10vw;
-        line-height: 1;
-      }
-      #home h1 span {
-        background: linear-gradient(to bottom, #4bd036, #000000);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      /* about */
-      #about {
-      }
-      /* about .me .text*/
-      #about .me .text {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-bottom: 20vh;
-      }
-      #about .me .text .title {
-        width: 50%;
-        color: #8cffa7;
-        margin-right: 10px;
-      }
-      #about .me .text .title h1 {
-        width: 100%;
-        font-size: 90px;
-      }
-      #about .me .text .int {
-        width: 45%;
-        min-width: 500px;
-      }
-      #about .me .text .int p {
-        font-size: 20px;
-        font-family: "ChosunNm";
-        line-height: 2;
-      }
-      #about .me .text .int p a {
-        display: block;
-      }
-      @media (max-width: 1300px) {
-        #about .me .text {
-          width: 100%;
-          padding: 1%;
-        }
-        #about .me .text .title {
-          width: 100%;
-        }
-        #about .me .text .title h1 {
-          font-size: 7vw;
-        }
-        #about .me .text .int {
-          width: 65vw;
-        }
-      }
-      @media (max-width: 800px) {
-        #about .me .text {
-          padding-left: 20px;
-        }
-        #about .me .text .int p {
-          width: 80vw;
-        }
-        #about .me .text .int p {
-          font-size: 2.5vw;
-        }
-      }
-
-      /* about .me .image*/
-      #about .me .image {
-        width: 100%;
-        position: relative;
-      }
-      #about .me .image img {
-        object-fit: cover;
-        border: 7px solid #8cffa7;
-      }
-
-      /* img01 */
-      #about .me .image .img01 {
-        display: flex;
-        justify-content: flex-end;
-      }
-      #about .me .image .img01 > div {
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
-        position: relative;
-        padding: 40px 0 0 40px;
-      }
-      #about .me .image .img01 > div > img {
-        width: 640px;
-        height: 410px;
-      }
-      #about .me .image .img01 > div > .arrow {
         position: absolute;
-        top: 0;
-        left: 15%;
-        transform: rotate(-45deg);
+        top: -150px;
+        right: 20px;
       }
-
-      /*img02  */
-      #about .me .image .img02 {
-        display: flex;
-        align-items: flex-end;
-        position: absolute;
-        top: 40%;
-        left: 10%;
-        z-index: -1;
-      }
-      #about .me .image .img02 > div {
-        height: 850px;
-        display: flex;
-        position: relative;
-        padding: 20px 0 0 20px;
-      }
-      #about .me .image .img02 > div > img {
-        width: 680px;
-        height: 360px;
-      }
-      #about .me .image .img02 > div > .arrow {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      #about .me .image .img02 .heart {
-        width: 200px;
-        margin-left: 10%;
-      }
-      @media (max-width: 1300px) {
-        #about .me .image {
-          margin-bottom: calc(100% - 40%);
-        }
-        #about .me .image .img02 {
-          top: calc(100% - 10%);
-          left: 0;
-        }
-      }
-      @media (max-width: 800px) {
-        #about .me .image img {
-          border: 3px solid #8cffa7;
-        }
-        #about .me .image .img01 > div {
-          height: 65vw;
-          padding: 5vw 0 0 10vw;
-        }
-        #about .me .image .img01 > div > img {
-          width: 80vw;
-          height: 50vw;
-        }
-        #about .me .image .img02 {
-          position: relative;
-          top: calc(100% - 10%);
-          margin-top: 2%;
-        }
-        #about .me .image .img02 > div {
-          height: 10vw;
-        }
-        #about .me .image .img02 > div > img {
-          width: 80vw;
-          height: 50vw;
-        }
-        #about .me .image .arrow svg {
-          width: 20vw;
-          height: 10vw;
-        }
-      }
-
-      /* about .skill스킬 */
-      #about .skill {
-        margin-top: 20vw;
-      }
-      #about .skill .skill__inner {
-        text-align: center;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-      }
-      #about .skill .chart {
-        position: relative;
-        /* min-width: 200px; */
-        width: 180px;
-        height: 180px;
-        background: conic-gradient(var(--black) 90deg, var(--lime) 50deg);
-        border-radius: 50%;
-        margin: 1%;
-        text-align: center;
-      }
-      #about .skill .chart span {
-        text-align: center;
-        font-size: 35px;
-        text-transform: uppercase;
-        line-height: 4.9;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background: var(--black);
-        border-radius: 50%;
-        width: 88%;
-        height: 88%;
-      }
-      @media (max-width: 1300px) {
-        #about .skill .chart {
-          margin-top: 30px;
-        }
-      }
-      @media (max-width: 800px) {
-        #about .skill .chart {
-          width: 30vw;
-          height: 30vw;
-        }
-        #about .skill .chart span {
-          font-size: 5.5vw;
-        }
-      }
-
-      /* work */
-      #work {
-      }
-      /* workType01*/
-      .workType01 {
-        margin-bottom: 10vw;
-      }
-      .workType01 > .work__img {
-        grid-column: 2 / 10;
-        grid-row: 1/5;
-        height: 100%;
-        width: 100%;
-        border: 5px solid var(--yellow);
-      }
-      .workType01 > .work__img .bar {
-        height: 10%;
-        font-size: 30px;
-        border-bottom: 5px solid var(--yellow);
-        line-height: 1.8;
-        padding-left: 10px;
-      }
-      .workType01 > .work__img img {
-        height: 90%;
-        object-fit: cover;
-      }
-      .workType01 > .work__text {
-        grid-column: 1 / 5;
-        grid-row: 4/6;
-        width: 570px;
-        height: 220px;
-        font-size: 20px;
-        font-family: "ChosunNm";
-        line-height: 1.5;
-        border: 5px solid var(--yellow);
-        padding: 2%;
-        background-color: var(--black);
-      }
-      .workType01 .earth {
-        grid-column: 4/6;
-        grid-row: 5/7;
-        align-self: center;
-        justify-self: center;
-        width: 130px;
-        height: 130px;
-      }
-      .workType01 > .code.view {
-        grid-column: 11;
-        grid-row: 5;
-      }
-      .workType01 > .code.txt {
-        grid-column: 9/11;
-        grid-row: 5;
-      }
-      .workType01 > .site.view {
-        grid-column: 10;
-        grid-row: 6;
-      }
-      .workType01 > .site.txt {
-        grid-column: 8/10;
-        grid-row: 6;
-      }
-      .workType01 > .txt {
-        align-self: center;
-        justify-self: center;
-        white-space: nowrap;
-        font-size: 30px;
-        text-transform: uppercase;
-        color: var(--yellow);
-      }
-
-      /* workType02 */
-      .workType02 {
-      }
-      .workType02 {
-        margin-bottom: 10vw;
-      }
-      .workType02 > .work__img {
-        grid-column: 3 / 11;
-        grid-row: 1/5;
-        height: 100%;
-        width: 100%;
-        border: 5px solid var(--lime);
-      }
-      .workType02 > .work__img .bar {
-        height: 10%;
-        font-size: 30px;
-        border-bottom: 5px solid var(--lime);
-        line-height: 1.8;
-        padding-left: 10px;
-      }
-      .workType02 > .work__img img {
-        height: 90%;
-        object-fit: cover;
-      }
-      .workType02 > .work__text {
-        grid-column: 8 / 12;
-        grid-row: 4/6;
-        width: 570px;
-        height: 220px;
-        font-size: 20px;
-        font-family: "ChosunNm";
-        line-height: 1.5;
-        border: 5px solid var(--lime);
-        padding: 2%;
-        background-color: var(--black);
-        padding-left: 20px;
-      }
-      .workType02 .earth {
-        grid-column: 7/9;
-        grid-row: 5/7;
-        align-self: center;
-        justify-self: center;
-        width: 130px;
-        height: 130px;
-      }
-      .workType02 > .code.view {
-        grid-column: 1;
-        grid-row: 5;
-      }
-      .workType02 > .code.txt {
-        grid-column: 2/4;
-        grid-row: 5;
-      }
-      .workType02 > .site.view {
-        grid-column: 2;
-        grid-row: 6;
-      }
-      .workType02 > .site.txt {
-        grid-column: 3/5;
-        grid-row: 6;
-      }
-      .workType02 > .txt {
-        align-self: center;
-        justify-self: center;
-        white-space: nowrap;
-        font-size: 30px;
-        text-transform: uppercase;
+      .scripType .siteView a {
+        display: inline-block;
         color: var(--lime);
+        font-size: 30px;
+        margin: 5% 10px 0 0;
+      }
+      .scripType .siteView .arrow {
+        width: 80px;
+        height: 80px;
+      }
+      .scripType .scrip__title {
+        padding-top: 7vw;
+        font-size: 100px;
+        font-weight: 700;
+      }
+      .scripType .scrip__text {
+        width: 85%;
+        font-family: var(--subFont);
+        font-size: 20px;
+        line-height: 1.5;
       }
     </style>
   </head>
   <body>
     <section id="home">
-      <h1>
-        WELCOME TO <br />
-        DEV <span>FRONTEND</span>
-      </h1>
+      <div class="sec1_text">
+        <div>Welcome</div>
+        <div>DEV frontEND</div>
+      </div>
+      <canvas id="webgl-canvas"></canvas>
     </section>
 
     <section id="about">
@@ -614,7 +307,7 @@
                 alt="웹표준site이미지"
               />
             </div>
-            <!-- //work__img -->
+            <!-- //workType01 work__img -->
 
             <p class="work__text">
               웹 표준 지침서를 준수하고 크로스브라우징 작업을 한 사이트입 니다.
@@ -626,46 +319,46 @@
             </p>
 
             <svg
-              class="earth"
-              viewBox="0 0 156 164"
-              width="90"
-              hight="90"
+              class="svg earth"
+              width="100"
+              height="100"
+              viewBox="0 0 100 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M153 82.0393C153 97.664 148.601 112.938 140.36 125.929C132.119 138.92 120.406 149.046 106.701 155.025C92.9968 161.004 77.9168 162.569 63.3683 159.521C48.8197 156.473 35.4559 148.949 24.9671 137.9C14.4782 126.852 7.33504 112.776 4.44114 97.4513C1.54726 82.127 3.03248 66.2428 8.70904 51.8076C14.3857 37.3723 23.9986 25.0344 36.3323 16.3538C48.666 7.6733 63.1664 3.04004 78.0001 3.04004C87.8491 3.04004 97.6019 5.08336 106.701 9.05345C115.801 13.0235 124.069 18.8427 131.033 26.1784C137.997 33.5142 143.522 42.2229 147.291 51.8076C151.06 61.3922 153 71.6651 153 82.0393Z"
+                d="M97 50C97 59.2957 94.2436 68.3827 89.0792 76.1118C83.9148 83.8409 76.5743 89.865 67.9862 93.4223C59.398 96.9797 49.9479 97.9104 40.8309 96.0969C31.7137 94.2834 23.3391 89.8071 16.7661 83.234C10.193 76.661 5.71663 68.2864 3.90311 59.1692C2.08961 50.0522 3.02035 40.6019 6.57767 32.0139C10.135 23.4257 16.1591 16.0853 23.8883 10.9209C31.6174 5.75652 40.7043 3 50.0001 3C56.1722 3 62.2839 4.21566 67.9862 6.57763C73.6885 8.9396 78.8697 12.4016 83.2341 16.766C87.5985 21.1304 91.0604 26.3115 93.4224 32.0139C95.7844 37.7162 97 43.8279 97 50Z"
                 fill="black"
                 stroke="#FFFF31"
                 stroke-width="5"
                 stroke-miterlimit="10"
               />
               <path
-                d="M113.986 82.0394C113.986 125.664 97.8772 161.021 78 161.021C58.1229 161.021 42.0303 125.664 42.0303 82.0394C42.0303 38.4147 58.1394 3.04004 78 3.04004C97.8607 3.04004 113.986 38.4147 113.986 82.0394Z"
+                d="M72.5511 50C72.5511 75.9542 62.4561 96.9897 49.9998 96.9897C37.5434 96.9897 27.4587 75.9542 27.4587 50C27.4587 24.0459 37.5537 3 49.9998 3C62.4458 3 72.5511 24.0459 72.5511 50Z"
                 stroke="#FFFF31"
                 stroke-width="5"
                 stroke-miterlimit="10"
               />
               <path
-                d="M153 82.0394C153 102.006 119.416 118.211 78 118.211C36.5839 118.211 3.01654 102.006 3.01654 82.0394C3.01654 62.073 36.5839 45.8502 78 45.8502C119.416 45.8502 153 62.0556 153 82.0394Z"
+                d="M97 50.0001C97 61.8789 75.9541 71.5202 50 71.5202C24.0458 71.5202 3.01025 61.8789 3.01025 50.0001C3.01025 38.1212 24.0458 28.4696 50 28.4696C75.9541 28.4696 97 38.1109 97 50.0001Z"
                 stroke="#FFFF31"
                 stroke-width="5"
                 stroke-miterlimit="10"
               />
               <path
-                d="M78 3.04004V161.021"
+                d="M50 3V96.9897"
                 stroke="#FFFF31"
                 stroke-width="5"
                 stroke-miterlimit="10"
               />
               <path
-                d="M3.00008 82.0396H152.983"
+                d="M3 50.0002H96.9897"
                 stroke="#FFFF31"
                 stroke-width="5"
                 stroke-miterlimit="10"
               />
             </svg>
-            <!-- //earth -->
+            <!-- //workType01 earth -->
 
             <span class="code txt">code view</span>
             <div class="code view">
@@ -678,29 +371,30 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <rect
-                  x="2"
-                  y="2.09796"
-                  width="85.8227"
-                  height="85.8227"
+                  x="3"
+                  y="3.09546"
+                  width="83.6776"
+                  height="83.6776"
                   fill="black"
                   stroke="#FFFF31"
-                  stroke-width="4"
+                  stroke-width="5"
                 />
                 <path
-                  d="M20.5989 70.7445L69.35 21.9934"
+                  d="M21.1335 70.0262L68.6661 22.4937"
                   stroke="#FFFF31"
-                  stroke-width="4"
+                  stroke-width="5"
                   stroke-miterlimit="10"
                 />
                 <path
-                  d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                  d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355"
                   stroke="#FFFF31"
-                  stroke-width="4"
+                  stroke-width="5"
                   stroke-miterlimit="10"
                 />
               </svg>
+              <!-- //workType01 arrow code-->
             </div>
-            <!-- //code__view -->
+            <!-- //workType01 code view -->
 
             <span class="site txt">site view</span>
             <div class="site view">
@@ -713,38 +407,37 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <rect
-                  x="2"
-                  y="2.09796"
-                  width="85.8227"
-                  height="85.8227"
+                  x="3"
+                  y="3.09546"
+                  width="83.6776"
+                  height="83.6776"
                   fill="black"
                   stroke="#FFFF31"
-                  stroke-width="4"
+                  stroke-width="5"
                 />
                 <path
-                  d="M20.5989 70.7445L69.35 21.9934"
+                  d="M21.1335 70.0262L68.6661 22.4937"
                   stroke="#FFFF31"
-                  stroke-width="4"
+                  stroke-width="5"
                   stroke-miterlimit="10"
                 />
                 <path
-                  d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                  d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355"
                   stroke="#FFFF31"
-                  stroke-width="4"
+                  stroke-width="5"
                   stroke-miterlimit="10"
                 />
               </svg>
+              <!-- //workType01 arrow site-->
             </div>
-            <!-- //code__view -->
+            <!-- //workType01 site view -->
           </div>
           <!-- //workType01 -->
+
           <div class="workType02 w_grid">
             <div class="work__img">
               <div class="bar">PHP SITE</div>
-              <img
-                src="../assets/img/work_westensard.png"
-                alt="웹표준site이미지"
-              />
+              <img src="../assets/img/work_PHP.png" alt="PHP site이미지" />
             </div>
             <!-- //work__img -->
 
@@ -758,46 +451,22 @@
             </p>
 
             <svg
-              class="earth"
-              viewBox="0 0 156 164"
-              width="90"
-              hight="90"
+              class="svg heart"
+              width="100"
+              height="100"
+              viewBox="0 0 100 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M153 82.0393C153 97.664 148.601 112.938 140.36 125.929C132.119 138.92 120.406 149.046 106.701 155.025C92.9968 161.004 77.9168 162.569 63.3683 159.521C48.8197 156.473 35.4559 148.949 24.9671 137.9C14.4782 126.852 7.33504 112.776 4.44114 97.4513C1.54726 82.127 3.03248 66.2428 8.70904 51.8076C14.3857 37.3723 23.9986 25.0344 36.3323 16.3538C48.666 7.6733 63.1664 3.04004 78.0001 3.04004C87.8491 3.04004 97.6019 5.08336 106.701 9.05345C115.801 13.0235 124.069 18.8427 131.033 26.1784C137.997 33.5142 143.522 42.2229 147.291 51.8076C151.06 61.3922 153 71.6651 153 82.0393Z"
+                d="M49.9949 29.2819C49.9436 -1.85186 2.94879 -9.6135 3.00004 30.372C3.05129 70.3575 49.0724 97 49.0724 97H51.1223C51.1223 97 97.0512 70.2485 97 30.2194C96.9487 -9.80974 49.9436 -1.85186 49.9949 29.2819Z"
                 fill="black"
-                stroke="var(--lime)"
-                stroke-width="5"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M113.986 82.0394C113.986 125.664 97.8772 161.021 78 161.021C58.1229 161.021 42.0303 125.664 42.0303 82.0394C42.0303 38.4147 58.1394 3.04004 78 3.04004C97.8607 3.04004 113.986 38.4147 113.986 82.0394Z"
-                stroke="var(--lime)"
-                stroke-width="5"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M153 82.0394C153 102.006 119.416 118.211 78 118.211C36.5839 118.211 3.01654 102.006 3.01654 82.0394C3.01654 62.073 36.5839 45.8502 78 45.8502C119.416 45.8502 153 62.0556 153 82.0394Z"
-                stroke="var(--lime)"
-                stroke-width="5"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M78 3.04004V161.021"
-                stroke="var(--lime)"
-                stroke-width="5"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M3.00008 82.0396H152.983"
-                stroke="var(--lime)"
+                stroke="#88FFA4"
                 stroke-width="5"
                 stroke-miterlimit="10"
               />
             </svg>
-            <!-- //earth -->
+            <!-- //workType02 heart -->
 
             <span class="code txt">code view</span>
             <div class="code view">
@@ -810,27 +479,28 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <rect
-                  x="2"
-                  y="2.09796"
+                  x="3"
+                  y="3.0979"
                   width="85.8227"
                   height="85.8227"
-                  fill="black"
-                  stroke="var(--lime)"
-                  stroke-width="4"
+                  fill="var(--black)"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
                 />
                 <path
-                  d="M20.5989 70.7445L69.35 21.9934"
+                  d="M71.9121 71.7477L23.161 22.9966"
                   stroke="var(--lime)"
-                  stroke-width="4"
+                  stroke-width="5"
                   stroke-miterlimit="10"
                 />
                 <path
-                  d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                  d="M22.543 59.2412L21.6004 21.433L59.4087 22.3755"
                   stroke="var(--lime)"
-                  stroke-width="4"
+                  stroke-width="5"
                   stroke-miterlimit="10"
                 />
               </svg>
+              <!-- workType02  arrow 1-->
             </div>
             <!-- //code__view -->
 
@@ -845,35 +515,793 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <rect
-                  x="2"
-                  y="2.09796"
+                  x="3"
+                  y="3.0979"
                   width="85.8227"
                   height="85.8227"
                   fill="var(--black)"
-                  stroke="var(--lime)"
-                  stroke-width="4"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
                 />
                 <path
-                  d="M20.5989 70.7445L69.35 21.9934"
+                  d="M71.9121 71.7477L23.161 22.9966"
                   stroke="var(--lime)"
-                  stroke-width="4"
+                  stroke-width="5"
                   stroke-miterlimit="10"
                 />
                 <path
-                  d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                  d="M22.543 59.2412L21.6004 21.433L59.4087 22.3755"
                   stroke="var(--lime)"
-                  stroke-width="4"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+              <!-- workType02  arrow 2  -->
+            </div>
+            <!-- //code__view -->
+          </div>
+          <!-- //workType02 -->
+
+          <div class="workType01 w_grid">
+            <div class="work__img">
+              <div class="bar">react SITE</div>
+              <img src="../assets/img/work_react.png" alt="리액트 site이미지" />
+            </div>
+            <!-- //workType01 work__img -->
+
+            <p class="work__text">
+              리액트로 만든 포트폴리오 사이트입니다. 컴포넌트를 활용하여
+              사이트를 완성하였고, SCSS를 사용하여 스타일을 지정했습니다.
+              포트폴리오와 레퍼런스 페이지는 작성한 json 파일의 정보를
+              get방식가져오고 유튜브와 무비 페이지는 api를 활용하여 각 사이트의
+              정보를 포토폴리오 사이트에서도 볼 수 있도록 작업하였습니더.
+              검색기능도 실제 사이트에서 검색한 것처럼 사이트의 검색정보도 볼 수
+              있도록 기능을 구현해놓았습니다.
+            </p>
+
+            <svg
+              class="svg earth"
+              width="100"
+              height="100"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M97 50C97 59.2957 94.2436 68.3827 89.0792 76.1118C83.9148 83.8409 76.5743 89.865 67.9862 93.4223C59.398 96.9797 49.9479 97.9104 40.8309 96.0969C31.7137 94.2834 23.3391 89.8071 16.7661 83.234C10.193 76.661 5.71663 68.2864 3.90311 59.1692C2.08961 50.0522 3.02035 40.6019 6.57767 32.0139C10.135 23.4257 16.1591 16.0853 23.8883 10.9209C31.6174 5.75652 40.7043 3 50.0001 3C56.1722 3 62.2839 4.21566 67.9862 6.57763C73.6885 8.9396 78.8697 12.4016 83.2341 16.766C87.5985 21.1304 91.0604 26.3115 93.4224 32.0139C95.7844 37.7162 97 43.8279 97 50Z"
+                fill="black"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M72.5511 50C72.5511 75.9542 62.4561 96.9897 49.9998 96.9897C37.5434 96.9897 27.4587 75.9542 27.4587 50C27.4587 24.0459 37.5537 3 49.9998 3C62.4458 3 72.5511 24.0459 72.5511 50Z"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M97 50.0001C97 61.8789 75.9541 71.5202 50 71.5202C24.0458 71.5202 3.01025 61.8789 3.01025 50.0001C3.01025 38.1212 24.0458 28.4696 50 28.4696C75.9541 28.4696 97 38.1109 97 50.0001Z"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M50 3V96.9897"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M3 50.0002H96.9897"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+            </svg>
+            <!-- //workType01 earth -->
+
+            <span class="code txt">code view</span>
+            <div class="code view">
+              <svg
+                class="arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="3.09546"
+                  width="83.6776"
+                  height="83.6776"
+                  fill="black"
+                  stroke="#FFFF31"
+                  stroke-width="5"
+                />
+                <path
+                  d="M21.1335 70.0262L68.6661 22.4937"
+                  stroke="#FFFF31"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355"
+                  stroke="#FFFF31"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+              <!-- //workType01 arrow code-->
+            </div>
+            <!-- //workType01 code view -->
+
+            <span class="site txt">site view</span>
+            <div class="site view">
+              <svg
+                class="arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="3.09546"
+                  width="83.6776"
+                  height="83.6776"
+                  fill="black"
+                  stroke="#FFFF31"
+                  stroke-width="5"
+                />
+                <path
+                  d="M21.1335 70.0262L68.6661 22.4937"
+                  stroke="#FFFF31"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355"
+                  stroke="#FFFF31"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+              <!-- //workType01 arrow site-->
+            </div>
+            <!-- //workType01 site view -->
+          </div>
+          <!-- //workType01 -->
+
+          <div class="workType02 w_grid">
+            <div class="work__img">
+              <div class="bar">project SITE</div>
+              <img
+                src="../assets/img/work_project.png"
+                alt="project site이미지"
+              />
+            </div>
+            <!-- //work__img -->
+
+            <p class="work__text">
+              프로젝트 사이트는 기획, 디자인, 컨셉트 등을 홀로 제작한 사이트
+              입니다. 사이트는 위의 소개한 PHP 사이트를 기반으로 코딩을 공부할
+              때 퀴즈 등의 게임으로 배우게 되면 재밌게 익하나갈 수 있을 것이라
+              생각하여 코딩 기초 퀴즈 사이트를 제작하게 되었습니다. 태그나
+              메서드, css속성 등의 가볍게 참고용으로 알아갈 수 있는 간단한
+              퀴즈들로 구성 되어 있습니다.
+            </p>
+
+            <svg
+              class="svg heart"
+              width="100"
+              height="100"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M49.9949 29.2819C49.9436 -1.85186 2.94879 -9.6135 3.00004 30.372C3.05129 70.3575 49.0724 97 49.0724 97H51.1223C51.1223 97 97.0512 70.2485 97 30.2194C96.9487 -9.80974 49.9436 -1.85186 49.9949 29.2819Z"
+                fill="black"
+                stroke="#88FFA4"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+            </svg>
+            <!-- //workType02 heart -->
+
+            <span class="code txt">code view</span>
+            <div class="code view">
+              <svg
+                class="arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="3.0979"
+                  width="85.8227"
+                  height="85.8227"
+                  fill="var(--black)"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                />
+                <path
+                  d="M71.9121 71.7477L23.161 22.9966"
+                  stroke="var(--lime)"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M22.543 59.2412L21.6004 21.433L59.4087 22.3755"
+                  stroke="var(--lime)"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+              <!-- //workType02  arrow 1 -->
+            </div>
+            <!-- //code__view -->
+
+            <span class="site txt">site view</span>
+            <div class="site view">
+              <svg
+                class="arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="3.0979"
+                  width="85.8227"
+                  height="85.8227"
+                  fill="var(--black)"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                />
+                <path
+                  d="M71.9121 71.7477L23.161 22.9966"
+                  stroke="var(--lime)"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M22.543 59.2412L21.6004 21.433L59.4087 22.3755"
+                  stroke="var(--lime)"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+              <!-- workType02  arrow 2 -->
+            </div>
+            <!-- //code__view -->
+          </div>
+          <!-- //workType02 -->
+        </div>
+        <!-- //container -->
+      </div>
+      <!-- //work__inner -->
+    </section>
+
+    <section id="scrip">
+      <header class="header">look at script</header>
+      <!-- //header -->
+
+      <div class="scrip__inner">
+        <div class="scripType music">
+          <div class="scrip__img img01"></div>
+          <!-- //scrip__img : script_music -->
+          <div class="container">
+            <div class="siteView">
+              <a href="#">site View</a>
+              <svg
+                class="svg arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="3.09546"
+                  width="83.6776"
+                  height="83.6776"
+                  fill="black"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                />
+                <path
+                  d="M21.1335 70.0262L68.6661 22.4937"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
                   stroke-miterlimit="10"
                 />
               </svg>
             </div>
-            <!-- //code__view -->
+
+            <div class="scrip__title">
+              music <br />
+              javascript
+            </div>
+            <div class="scrip__text">
+              음악 플레이어를 구현하였습니다. <br />
+              음악 재생하기, 이전곡, 다음 곡 재생과 반복 듣기, 한번 반복, 그에
+              따라 아이콘 변경하기 곡이 끝나면 다음 곡 재생하기와 <br />
+              뮤직 리스트 펼치기 , 리스트를 클릭하면 해당 곡 재생하기와 재생곡
+              시간에 따라 움직이는 바와 재생 시간 표기, 재생바를 <br />
+              누르면 해당 지점 음악이 재생되도록하고 곡을 재생하면 변경되는
+              이미지나 오디오명도 변경되어 출력되도록 하였습니다.
+            </div>
           </div>
-          <!-- //workType01 -->
+          <!-- //container -->
         </div>
-        <!-- //contents -->
+        <!-- //scripType music -->
+
+        <div class="scripType card">
+          <div class="scrip__img img02"></div>
+          <!-- //scrip__img : script_card -->
+          <div class="container">
+            <div class="siteView">
+              <a href="#">site View</a>
+              <svg
+                class="svg arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="3.09546"
+                  width="83.6776"
+                  height="83.6776"
+                  fill="black"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                />
+                <path
+                  d="M21.1335 70.0262L68.6661 22.4937"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </div>
+
+            <div class="scrip__title">
+              card game <br />
+              javascript
+            </div>
+            <div class="scrip__text">
+              카드 암기 게임을 만들었습니다. <br />
+              몇 초 동안 카드 안의 그림을 보여주고 다시 카드를 뒤집어서 뒤집힌
+              카드의 짝을 이루는 그림을 맞추는 게임입니다. <br />
+              스타트 버튼을 누르면 게임 규칙과 설명이 나옵니다. 게임을 플레이
+              하시고 나시면 합산 점수와 연속으로 맞춘 갯수 등이 스코어가
+              나타납니다. 그 외 틀리면 이미지가 흔들리고 카드 뒤집는 도중에 다른
+              카드가 뒤집히지 않도록 또 맞춘 카드들은 뒤집히지 않게 하도록
+              구현하였습니다.
+            </div>
+          </div>
+          <!-- //container -->
+        </div>
+        <!-- //scripType card-->
+
+        <div class="scripType typing">
+          <div class="scrip__img img03"></div>
+          <!-- //scrip__img : script_typing -->
+          <div class="container">
+            <div class="siteView">
+              <a href="#">site View</a>
+              <svg
+                class="svg arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="3.09546"
+                  width="83.6776"
+                  height="83.6776"
+                  fill="black"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                />
+                <path
+                  d="M21.1335 70.0262L68.6661 22.4937"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </div>
+
+            <div class="scrip__title">
+              typing game <br />
+              javascript
+            </div>
+            <div class="scrip__text">
+              영문 타이핑 연습을 할 수 있는 게임입니다. <br />
+              입력칸에 예제에 맞춰 타이핑하면 타이머가 움직이기 시작하면서
+              글자가 파란색으로 변합니다. 틀리면 빨간색으로 표기 됩니다. <br />
+              1분동안한 타이핑 실수와 맞은 갯수등의 스코어가 하단에 표시 됩니다
+              1분 동안 얼마나 타이핑 할 수 있는 지 확인해보세요!
+            </div>
+          </div>
+          <!-- //container -->
+        </div>
+        <!-- //scripType typing-->
+
+        <div class="scripType tertris">
+          <div class="scrip__img img04"></div>
+          <!-- //scrip__img : script_tertris -->
+          <div class="container">
+            <div class="siteView">
+              <a href="#">site View</a>
+              <svg
+                class="svg arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="3.09546"
+                  width="83.6776"
+                  height="83.6776"
+                  fill="black"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                />
+                <path
+                  d="M21.1335 70.0262L68.6661 22.4937"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355"
+                  stroke="#8DFFA8"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </div>
+
+            <div class="scrip__title">
+              tetris <br />
+              javascript
+            </div>
+            <div class="scrip__text">
+              테트리스 게임입니다. 특정 모양의 블록을 쌓아올리는 게임입니다.
+              <br />
+              특정 모양의 블록을 쌓아올려서 한줄을 완성하면 사라지고 블록을
+              천장까지 닿지 않게 하고 최대한 점수를 내야합니다. 블록은 css로
+              구현하고 블록 교체와 내려오는 애니메이션, 블록을 쌓아올릴 수
+              있도록 바닥에 닿으면 블록이 사라지않고 쌓인 블록 위에 블록을 쌓을
+              수 있고 천장까지 닿으면 더 이상 블록이 내려오면 게임오버 되도록
+              하였습니다.
+            </div>
+          </div>
+          <!-- //container -->
+        </div>
+        <!-- //scripType tertris-->
       </div>
-      <!-- //work__inner -->
+      <!-- //scrip__inner -->
     </section>
+
+    <section id="effect">
+      <header class="header">LET’s see the effect</header>
+      <!-- //header -->
+      <div class="container">
+        <div class="effectType 01">
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script id="js-vertex-shader" type="x-shader/x-vertex">
+      uniform float time;
+      varying vec3 vPosition;
+      varying vec3 vNormal;
+      varying float vNoise;
+      varying vec2 vUv;
+      float PI = 3.141592653589793238;
+
+      float hash1(float p) {
+          vec2 p2 = fract(p * vec2(5.3983, 5.4427));
+          p2 += dot(p2.yx, p2.xy + vec2(21.5351, 14.3137));
+          return fract(p2.x * p2.y * 95.4337);
+      }
+
+      vec4 noised( in vec3 x ) {
+          vec3 p = floor(x);
+          vec3 w = fract(x);
+
+          vec3 u = w * w * w * (w * (w * 6.0 - 15.0) + 10.0);
+          vec3 du = 30.0 * w * w * (w * (w - 2.0) + 1.0);
+
+          float n = p.x + 317.0 * p.y + 157.0 * p.z;
+          float a = hash1(n + 0.0);
+          float b = hash1(n + 1.0);
+          float c = hash1(n + 317.0);
+          float d = hash1(n + 318.0);
+          float e = hash1(n + 157.0);
+          float f = hash1(n + 158.0);
+          float g = hash1(n + 474.0);
+          float h = hash1(n + 475.0);
+
+          float k0 = a;
+          float k1 = b - a;
+          float k2 = c - a;
+          float k3 = e - a;
+          float k4 = a - b - c + d;
+          float k5 = a - c - e + g;
+          float k6 = a - b - e + f;
+          float k7 = - a + b + c - d + e - f - g + h;
+
+          return vec4( - 1.0 + 2.0 * (k0 + k1 * u.x + k2 * u.y + k3 * u.z + k4 * u.x * u.y + k5 * u.y * u.z + k6 * u.z * u.x + k7 * u.x * u.y * u.z), 2.0 * du * vec3(k1 + k4 * u.y + k6 * u.z + k7 * u.y * u.z, k2 + k5 * u.z + k4 * u.x + k7 * u.z * u.x, k3 + k6 * u.x + k5 * u.y + k7 * u.x * u.y ));
+      }
+
+      void main() {
+          vUv = uv;
+          vNormal = normal;
+          vec3 p = position;
+          float noise = noised(10.0 * vec3(p.x, p.y + 0.2 * cos(2.0 * PI * time), p.z + 0.2 * sin(2.0 * PI * time))).x;
+          noise = noise * (2.0 - noise);
+
+          vNoise = noise;
+          vec3 newposition = position + 0.2 * noise * normalize(position);
+          vec4 mvPosition = modelViewMatrix * vec4(newposition, 1.0);
+          vPosition = mvPosition.xyz;
+
+          gl_PointSize = 15.0 * (1.0 / - mvPosition.z);
+          gl_Position = projectionMatrix * mvPosition;
+      }
+    </script>
+    <!-- fragmentShader -->
+    <script id="js-fragment-shader" type="x-shader/x-fragment">
+      precision highp float;
+
+      varying vec3 vPosition;
+      varying vec3 vNormal;
+
+      void main()	{
+          vec3 X = dFdx(vPosition);
+          vec3 Y = dFdy(vPosition);
+          vec3 n = normalize(cross(X, Y));
+
+          float diff = dot(n, normalize(vec3(1.0)));
+          diff *= diff * diff;
+
+          gl_FragColor = vec4(n * diff, 1.0);
+          gl_FragColor = vec4(n, 1.0);
+      }
+    </script>
+    <script id="js-fragment-line" type="x-shader/x-fragment">
+      precision highp float;
+
+      void main()	{
+          float dist = length(gl_PointCoord - vec2(0.5));
+          float disc = smoothstep(2.5, 0.45, dist);
+          if(disc == 0.0) discard;
+
+          gl_FragColor = vec4(2.0, 2.0, 2.0, disc);
+      }
+    </script>
+    <script>
+      class Stage {
+        constructor() {
+          this.renderParam = {
+            clearColor: 0xffffff,
+            width: window.innerWidth,
+            height: window.innerHeight,
+          };
+
+          this.cameraParam = {
+            fov: 50,
+            near: 0.01,
+            far: 1000,
+            lookAt: new THREE.Vector3(0, 0, 0),
+            x: 0,
+            y: 0,
+            z: 7,
+          };
+
+          this.scene = null;
+          this.camera = null;
+          this.renderer = null;
+          this.isInitialized = false;
+        }
+
+        init() {
+          this._setScene();
+          this._setRender();
+          this._setCamera();
+          this.isInitialized = true;
+        }
+
+        _setScene() {
+          this.scene = new THREE.Scene();
+        }
+
+        _setRender() {
+          this.renderer = new THREE.WebGLRenderer({
+            canvas: document.getElementById("webgl-canvas"),
+            antialias: true,
+            alpha: true,
+          });
+          this.renderer.setPixelRatio(window.devicePixelRatio);
+          this.renderer.setSize(
+            this.renderParam.width,
+            this.renderParam.height
+          );
+        }
+
+        _setCamera() {
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+
+          if (!this.isInitialized) {
+            this.camera = new THREE.PerspectiveCamera(
+              this.cameraParam.fov,
+              this.renderParam.width / this.renderParam.height,
+              this.cameraParam.near,
+              this.cameraParam.far
+            );
+
+            this.camera.position.set(
+              this.cameraParam.x,
+              this.cameraParam.y,
+              this.cameraParam.z
+            );
+            this.camera.lookAt(this.cameraParam.lookAt);
+          }
+
+          this.camera.aspect = windowWidth / windowHeight;
+          this.camera.updateProjectionMatrix();
+          this.renderer.setPixelRatio(window.devicePixelRatio);
+          this.renderer.setSize(windowWidth, windowHeight);
+        }
+
+        _render() {
+          this.renderer.render(this.scene, this.camera);
+        }
+
+        onResize() {
+          this._setCamera();
+        }
+
+        onRaf() {
+          this._render();
+        }
+      }
+
+      class Mesh {
+        constructor(stage) {
+          this.geometryParam = {
+            width: 1,
+            height: 7,
+          };
+
+          this.uniforms = {
+            time: {
+              type: "f",
+              value: 0.0,
+            },
+          };
+
+          this.stage = stage;
+        }
+
+        init() {
+          this._setMesh();
+        }
+
+        _setMesh() {
+          const geometry = new THREE.IcosahedronBufferGeometry(
+            this.geometryParam.width,
+            this.geometryParam.height
+          );
+
+          const material = new THREE.ShaderMaterial({
+            vertexShader:
+              document.getElementById("js-vertex-shader").textContent,
+            fragmentShader:
+              document.getElementById("js-fragment-shader").textContent,
+            uniforms: this.uniforms,
+            side: THREE.DoubleSide,
+          });
+
+          const material1 = new THREE.ShaderMaterial({
+            vertexShader:
+              document.getElementById("js-vertex-shader").textContent,
+            fragmentShader:
+              document.getElementById("js-fragment-line").textContent,
+            uniforms: this.uniforms,
+            side: THREE.DoubleSide,
+          });
+
+          this.mesh = new THREE.Mesh(geometry, material);
+          this.meshPoints = new THREE.Points(geometry, material1);
+
+          this.stage.scene.add(this.mesh);
+          this.stage.scene.add(this.meshPoints);
+          this.stage.scene.add(this.meshSphere);
+
+          this.meshPoints.scale.set(1.5 + 0.1, 1.5 + 0.1, 1.5 + 0.1);
+        }
+
+        _render() {
+          this.uniforms.time.value += 0.001;
+          this.stage.scene.rotation.x += 0.1 * Math.sin(0.001 * 4 * Math.PI);
+          this.stage.scene.rotation.y += 0.2 * Math.sin(0.001 * 2 * Math.PI);
+          this.stage.scene.rotation.z += 0.3 * Math.sin(0.001 * 2 * Math.PI);
+        }
+
+        onRaf() {
+          this._render();
+        }
+      }
+
+      (() => {
+        const stage = new Stage();
+        const mesh = new Mesh(stage);
+
+        stage.init();
+        mesh.init();
+
+        window.addEventListener("resize", () => {
+          stage.onResize();
+        });
+
+        const _raf = () => {
+          window.requestAnimationFrame(() => {
+            stage.onRaf();
+            mesh.onRaf();
+
+            _raf();
+          });
+        };
+
+        _raf();
+      })();
+    </script>
+    <!-- //home -->
   </body>
 </html>

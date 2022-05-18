@@ -1,5 +1,14 @@
-<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="2" y="2.09796" width="85.8227" height="85.8227" fill="black" stroke="#FFFF31" stroke-width="4"/>
-<path d="M20.5989 70.7445L69.35 21.9934" stroke="#FFFF31" stroke-width="4" stroke-miterlimit="10"/>
-<path d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411" stroke="#FFFF31" stroke-width="4" stroke-miterlimit="10"/>
+<!-- lime -->
+<svg class="svg arrow"  width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3" y="3.09546" width="83.6776" height="83.6776" fill="black" stroke="#8DFFA8" stroke-width="5"/>
+<path d="M21.1335 70.0262L68.6661 22.4937" stroke="#8DFFA8" stroke-width="5" stroke-miterlimit="10"/>
+<path d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355" stroke="#8DFFA8" stroke-width="5" stroke-miterlimit="10"/>
 </svg>
+
+<!-- yellow -->
+<svg class="svg arrow"  width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3" y="3.09546" width="83.6776" height="83.6776" fill="black" stroke="#FFFF31" stroke-width="5"/>
+<path d="M21.1335 70.0262L68.6661 22.4937" stroke="#FFFF31" stroke-width="5" stroke-miterlimit="10"/>
+<path d="M33.3276 21.8912L70.1909 20.9722L69.2719 57.8355" stroke="#FFFF31" stroke-width="5" stroke-miterlimit="10"/>
+</svg>
+

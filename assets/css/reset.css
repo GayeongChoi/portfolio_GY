@@ -234,6 +234,7 @@ textarea {
   color: #fff;
   font-family: "GmarketSans", "AppleSDGothicNeo-Regular", "Malgun Gothic",
     "맑은 고딕", "dotum", "돋움";
+  text-transform: uppercase;
 }
 
 /* 링크 초기화 */
@@ -259,6 +260,7 @@ address {
 img {
   width: 100%;
   vertical-align: top;
+  object-fit: cover;
 }
 
 /* 테두리 초기화 */
