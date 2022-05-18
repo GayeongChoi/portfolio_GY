@@ -242,89 +242,141 @@
       /* work */
       #work {
       }
-      /* work workType01*/
-      #work .workType01 {
-        position: relative;
+      /* workType01*/
+      .workType01 {
+        margin-bottom: 10vw;
+      }
+      .workType01 > .work__img {
+        grid-column: 2 / 10;
+        grid-row: 1/5;
+        height: 100%;
         width: 100%;
-        margin-bottom: 400px;
-      }
-      #work .workType01 .work__img {
-        display: inline-block;
-        margin: 0 auto;
-        width: 90%;
         border: 5px solid var(--yellow);
-        z-index: 0;
       }
-      #work .workType01 .work__img .bar {
-        height: 3%;
-        min-height: 50px;
+      .workType01 > .work__img .bar {
+        height: 10%;
+        font-size: 30px;
         border-bottom: 5px solid var(--yellow);
-
-        text-align: left;
-        line-height: 2.3;
+        line-height: 1.8;
         padding-left: 10px;
-        text-transform: uppercase;
-        font-size: 25px;
       }
-      #work .workType01 .work__img img {
-        height: 95%;
+      .workType01 > .work__img img {
+        height: 90%;
         object-fit: cover;
       }
-      #work .workType01 .work__bottom {
-        width: 100%;
-        min-width: 100%;
-        position: absolute;
-        left: -100px;
-        top: 500px;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: -500px;
-      }
-      #work .workType01 .work__text {
-        display: block;
-      }
-      #work .workType01 .work__text p {
+      .workType01 > .work__text {
+        grid-column: 1 / 5;
+        grid-row: 4/6;
         width: 570px;
         height: 220px;
+        font-size: 20px;
         font-family: "ChosunNm";
         line-height: 1.5;
-        font-size: 20px;
         border: 5px solid var(--yellow);
         padding: 2%;
         background-color: var(--black);
       }
-      #work .workType01 .work__text svg {
-        width: 200px;
-        position: absolute;
-        left: 500px;
-        top: 150px;
-        margin-right: 500px;
+      .workType01 .earth {
+        grid-column: 4/6;
+        grid-row: 5/7;
+        align-self: center;
+        justify-self: center;
+        width: 130px;
+        height: 130px;
       }
-      #work .workType01 .view {
-        position: absolute;
-        right: -150px;
-        top: 0;
-
-        width: 300px;
-        min-height: 150px;
-        margin-top: 100px;
+      .workType01 > .code.view {
+        grid-column: 11;
+        grid-row: 5;
       }
-      #work .workType01 .view > div {
-        height: 70px;
-        margin: 30px 0;
+      .workType01 > .code.txt {
+        grid-column: 9/11;
+        grid-row: 5;
       }
-      #work .workType01 .view span {
-        text-align: center;
-        font-size: 1.5vw;
+      .workType01 > .site.view {
+        grid-column: 10;
+        grid-row: 6;
+      }
+      .workType01 > .site.txt {
+        grid-column: 8/10;
+        grid-row: 6;
+      }
+      .workType01 > .txt {
+        align-self: center;
+        justify-self: center;
+        white-space: nowrap;
+        font-size: 30px;
         text-transform: uppercase;
-        counter-reset: var(--yellow);
         color: var(--yellow);
-        margin-right: 15px;
-        margin-bottom: 50px;
       }
-      #work .workType01 .view svg {
-        width: 70px;
-        height: 70px;
+
+      /* workType02 */
+      .workType02 {
+      }
+      .workType02 {
+        margin-bottom: 10vw;
+      }
+      .workType02 > .work__img {
+        grid-column: 3 / 11;
+        grid-row: 1/5;
+        height: 100%;
+        width: 100%;
+        border: 5px solid var(--lime);
+      }
+      .workType02 > .work__img .bar {
+        height: 10%;
+        font-size: 30px;
+        border-bottom: 5px solid var(--lime);
+        line-height: 1.8;
+        padding-left: 10px;
+      }
+      .workType02 > .work__img img {
+        height: 90%;
+        object-fit: cover;
+      }
+      .workType02 > .work__text {
+        grid-column: 8 / 12;
+        grid-row: 4/6;
+        width: 570px;
+        height: 220px;
+        font-size: 20px;
+        font-family: "ChosunNm";
+        line-height: 1.5;
+        border: 5px solid var(--lime);
+        padding: 2%;
+        background-color: var(--black);
+        padding-left: 20px;
+      }
+      .workType02 .earth {
+        grid-column: 7/9;
+        grid-row: 5/7;
+        align-self: center;
+        justify-self: center;
+        width: 130px;
+        height: 130px;
+      }
+      .workType02 > .code.view {
+        grid-column: 1;
+        grid-row: 5;
+      }
+      .workType02 > .code.txt {
+        grid-column: 2/4;
+        grid-row: 5;
+      }
+      .workType02 > .site.view {
+        grid-column: 2;
+        grid-row: 6;
+      }
+      .workType02 > .site.txt {
+        grid-column: 3/5;
+        grid-row: 6;
+      }
+      .workType02 > .txt {
+        align-self: center;
+        justify-self: center;
+        white-space: nowrap;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: var(--lime);
       }
     </style>
   </head>
@@ -554,139 +606,270 @@
         <header class="header">I MADE SITE</header>
         <!-- //header -->
         <div class="container">
-          <div class="workType01">
+          <div class="workType01 w_grid">
             <div class="work__img">
               <div class="bar">WESTENDARD SITE</div>
               <img
-                src="assets/img/work_westensard.png"
+                src="../assets/img/work_westensard.png"
                 alt="웹표준site이미지"
               />
             </div>
             <!-- //work__img -->
-            <div class="work__bottom">
-              <div class="work__text">
-                <p>
-                  웹 표준 지침서를 준수하고 크로스브라우징 작업을 한 사이트입
-                  니다. 모든 사용자가 이용에 불편이 없도록 대체 텍스트로 웹 접
-                  근성 또한 고려하였습니다. 슬라이드, 탭, 메뉴, 팝업, 동영상 기
-                  능을 작업하였으며, 동적인 부분을 더하기 위해 slick.js 등과 같
-                  은 플러그인을 이용하여 배너와 갤러리에 효과를 주었습니다. 크
-                  로스 브라우징은 익스플로러 8버전부터 지원합니다
-                </p>
-                <svg
-                  viewBox="0 0 156 164"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M153 82.0393C153 97.664 148.601 112.938 140.36 125.929C132.119 138.92 120.406 149.046 106.701 155.025C92.9968 161.004 77.9168 162.569 63.3683 159.521C48.8197 156.473 35.4559 148.949 24.9671 137.9C14.4782 126.852 7.33504 112.776 4.44114 97.4513C1.54726 82.127 3.03248 66.2428 8.70904 51.8076C14.3857 37.3723 23.9986 25.0344 36.3323 16.3538C48.666 7.6733 63.1664 3.04004 78.0001 3.04004C87.8491 3.04004 97.6019 5.08336 106.701 9.05345C115.801 13.0235 124.069 18.8427 131.033 26.1784C137.997 33.5142 143.522 42.2229 147.291 51.8076C151.06 61.3922 153 71.6651 153 82.0393Z"
-                    fill="black"
-                    stroke="#FFFF31"
-                    stroke-width="5"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M113.986 82.0394C113.986 125.664 97.8772 161.021 78 161.021C58.1229 161.021 42.0303 125.664 42.0303 82.0394C42.0303 38.4147 58.1394 3.04004 78 3.04004C97.8607 3.04004 113.986 38.4147 113.986 82.0394Z"
-                    stroke="#FFFF31"
-                    stroke-width="5"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M153 82.0394C153 102.006 119.416 118.211 78 118.211C36.5839 118.211 3.01654 102.006 3.01654 82.0394C3.01654 62.073 36.5839 45.8502 78 45.8502C119.416 45.8502 153 62.0556 153 82.0394Z"
-                    stroke="#FFFF31"
-                    stroke-width="5"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M78 3.04004V161.021"
-                    stroke="#FFFF31"
-                    stroke-width="5"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M3.00008 82.0396H152.983"
-                    stroke="#FFFF31"
-                    stroke-width="5"
-                    stroke-miterlimit="10"
-                  />
-                </svg>
-              </div>
-              <!-- //work__text -->
-              <div class="view">
-                <div class="code__view mb50">
-                  <span>code view</span>
-                  <svg
-                    class="arrow"
-                    width="70"
-                    height="70"
-                    viewBox="0 0 90 90"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="2"
-                      y="2.09796"
-                      width="85.8227"
-                      height="85.8227"
-                      fill="black"
-                      stroke="#FFFF31"
-                      stroke-width="4"
-                    />
-                    <path
-                      d="M20.5989 70.7445L69.35 21.9934"
-                      stroke="#FFFF31"
-                      stroke-width="4"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
-                      stroke="#FFFF31"
-                      stroke-width="4"
-                      stroke-miterlimit="10"
-                    />
-                  </svg>
-                </div>
-                <!-- //code__view -->
-                <div class="site__view">
-                  <span>site view</span>
-                  <svg
-                    class="arrow"
-                    width="90"
-                    height="90"
-                    viewBox="0 0 90 90"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="2"
-                      y="2.09796"
-                      width="85.8227"
-                      height="85.8227"
-                      fill="black"
-                      stroke="#FFFF31"
-                      stroke-width="4"
-                    />
-                    <path
-                      d="M20.5989 70.7445L69.35 21.9934"
-                      stroke="#FFFF31"
-                      stroke-width="4"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
-                      stroke="#FFFF31"
-                      stroke-width="4"
-                      stroke-miterlimit="10"
-                    />
-                  </svg>
-                </div>
-                <!-- //code__view -->
-              </div>
-              <!-- //view -->
+
+            <p class="work__text">
+              웹 표준 지침서를 준수하고 크로스브라우징 작업을 한 사이트입 니다.
+              모든 사용자가 이용에 불편이 없도록 대체 텍스트로 웹 접 근성 또한
+              고려하였습니다. 슬라이드, 탭, 메뉴, 팝업, 동영상 기 능을
+              작업하였으며, 동적인 부분을 더하기 위해 slick.js 등과 같 은
+              플러그인을 이용하여 배너와 갤러리에 효과를 주었습니다. 크 로스
+              브라우징은 익스플로러 8버전부터 지원합니다
+            </p>
+
+            <svg
+              class="earth"
+              viewBox="0 0 156 164"
+              width="90"
+              hight="90"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M153 82.0393C153 97.664 148.601 112.938 140.36 125.929C132.119 138.92 120.406 149.046 106.701 155.025C92.9968 161.004 77.9168 162.569 63.3683 159.521C48.8197 156.473 35.4559 148.949 24.9671 137.9C14.4782 126.852 7.33504 112.776 4.44114 97.4513C1.54726 82.127 3.03248 66.2428 8.70904 51.8076C14.3857 37.3723 23.9986 25.0344 36.3323 16.3538C48.666 7.6733 63.1664 3.04004 78.0001 3.04004C87.8491 3.04004 97.6019 5.08336 106.701 9.05345C115.801 13.0235 124.069 18.8427 131.033 26.1784C137.997 33.5142 143.522 42.2229 147.291 51.8076C151.06 61.3922 153 71.6651 153 82.0393Z"
+                fill="black"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M113.986 82.0394C113.986 125.664 97.8772 161.021 78 161.021C58.1229 161.021 42.0303 125.664 42.0303 82.0394C42.0303 38.4147 58.1394 3.04004 78 3.04004C97.8607 3.04004 113.986 38.4147 113.986 82.0394Z"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M153 82.0394C153 102.006 119.416 118.211 78 118.211C36.5839 118.211 3.01654 102.006 3.01654 82.0394C3.01654 62.073 36.5839 45.8502 78 45.8502C119.416 45.8502 153 62.0556 153 82.0394Z"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M78 3.04004V161.021"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M3.00008 82.0396H152.983"
+                stroke="#FFFF31"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+            </svg>
+            <!-- //earth -->
+
+            <span class="code txt">code view</span>
+            <div class="code view">
+              <svg
+                class="arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="2"
+                  y="2.09796"
+                  width="85.8227"
+                  height="85.8227"
+                  fill="black"
+                  stroke="#FFFF31"
+                  stroke-width="4"
+                />
+                <path
+                  d="M20.5989 70.7445L69.35 21.9934"
+                  stroke="#FFFF31"
+                  stroke-width="4"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                  stroke="#FFFF31"
+                  stroke-width="4"
+                  stroke-miterlimit="10"
+                />
+              </svg>
             </div>
-            <!-- //work__bottom -->
+            <!-- //code__view -->
+
+            <span class="site txt">site view</span>
+            <div class="site view">
+              <svg
+                class="arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="2"
+                  y="2.09796"
+                  width="85.8227"
+                  height="85.8227"
+                  fill="black"
+                  stroke="#FFFF31"
+                  stroke-width="4"
+                />
+                <path
+                  d="M20.5989 70.7445L69.35 21.9934"
+                  stroke="#FFFF31"
+                  stroke-width="4"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                  stroke="#FFFF31"
+                  stroke-width="4"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </div>
+            <!-- //code__view -->
           </div>
-          <!-- //workType01-01 -->
+          <!-- //workType01 -->
+          <div class="workType02 w_grid">
+            <div class="work__img">
+              <div class="bar">PHP SITE</div>
+              <img
+                src="../assets/img/work_westensard.png"
+                alt="웹표준site이미지"
+              />
+            </div>
+            <!-- //work__img -->
+
+            <p class="work__text">
+              PHP 만든 포트폴리오 사이트입니다. PHP로 페이지의 정보를 입력하면
+              데이터베이스에 입력한 정보를 저장하여 불러서 로그인, 회원가입,
+              댓글 기능, 블로그 기능, 퀴즈 게임 등이 각 페이지에 구현하고 메인은
+              슬라이스 기능을 넣고 댓글, 블로그, 퀴즈 페이지의 기능을 가져와서
+              페이지의 글이 추가되면 추가된 항목이 메인 페이지에도 반영이 될 수
+              있도록 작업하였습니다.
+            </p>
+
+            <svg
+              class="earth"
+              viewBox="0 0 156 164"
+              width="90"
+              hight="90"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M153 82.0393C153 97.664 148.601 112.938 140.36 125.929C132.119 138.92 120.406 149.046 106.701 155.025C92.9968 161.004 77.9168 162.569 63.3683 159.521C48.8197 156.473 35.4559 148.949 24.9671 137.9C14.4782 126.852 7.33504 112.776 4.44114 97.4513C1.54726 82.127 3.03248 66.2428 8.70904 51.8076C14.3857 37.3723 23.9986 25.0344 36.3323 16.3538C48.666 7.6733 63.1664 3.04004 78.0001 3.04004C87.8491 3.04004 97.6019 5.08336 106.701 9.05345C115.801 13.0235 124.069 18.8427 131.033 26.1784C137.997 33.5142 143.522 42.2229 147.291 51.8076C151.06 61.3922 153 71.6651 153 82.0393Z"
+                fill="black"
+                stroke="var(--lime)"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M113.986 82.0394C113.986 125.664 97.8772 161.021 78 161.021C58.1229 161.021 42.0303 125.664 42.0303 82.0394C42.0303 38.4147 58.1394 3.04004 78 3.04004C97.8607 3.04004 113.986 38.4147 113.986 82.0394Z"
+                stroke="var(--lime)"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M153 82.0394C153 102.006 119.416 118.211 78 118.211C36.5839 118.211 3.01654 102.006 3.01654 82.0394C3.01654 62.073 36.5839 45.8502 78 45.8502C119.416 45.8502 153 62.0556 153 82.0394Z"
+                stroke="var(--lime)"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M78 3.04004V161.021"
+                stroke="var(--lime)"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M3.00008 82.0396H152.983"
+                stroke="var(--lime)"
+                stroke-width="5"
+                stroke-miterlimit="10"
+              />
+            </svg>
+            <!-- //earth -->
+
+            <span class="code txt">code view</span>
+            <div class="code view">
+              <svg
+                class="arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="2"
+                  y="2.09796"
+                  width="85.8227"
+                  height="85.8227"
+                  fill="black"
+                  stroke="var(--lime)"
+                  stroke-width="4"
+                />
+                <path
+                  d="M20.5989 70.7445L69.35 21.9934"
+                  stroke="var(--lime)"
+                  stroke-width="4"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                  stroke="var(--lime)"
+                  stroke-width="4"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </div>
+            <!-- //code__view -->
+
+            <span class="site txt">site view</span>
+            <div class="site view">
+              <svg
+                class="arrow"
+                width="90"
+                height="90"
+                viewBox="0 0 90 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="2"
+                  y="2.09796"
+                  width="85.8227"
+                  height="85.8227"
+                  fill="var(--black)"
+                  stroke="var(--lime)"
+                  stroke-width="4"
+                />
+                <path
+                  d="M20.5989 70.7445L69.35 21.9934"
+                  stroke="var(--lime)"
+                  stroke-width="4"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M33.1054 21.3754L70.9137 20.4328L69.9711 58.2411"
+                  stroke="var(--lime)"
+                  stroke-width="4"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </div>
+            <!-- //code__view -->
+          </div>
+          <!-- //workType01 -->
         </div>
         <!-- //contents -->
       </div>

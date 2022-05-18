@@ -17,6 +17,14 @@ body {
   overflow-x: hidden;
 }
 
+/* 그리드 */
+.w_grid {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(6, minmax(100px, auto));
+  grid-gap: 10px;
+}
+
 /* 컨테이너 */
 .container {
   max-width: 1400px;
