@@ -393,3 +393,119 @@ path {
   justify-self: end;
   margin-right: 10px;
 }
+
+/* script */
+.scrip__inner {
+  margin: 30vh auto;
+}
+.scripType {
+  width: 100vw;
+  color: var(--lime);
+  margin-bottom: 30vh;
+}
+.scripType > .scrip__img {
+  height: 30vw;
+  min-height: 500px;
+}
+.scripType > .scrip__img.img01 {
+  background: url(../img/script_music.png) center no-repeat;
+}
+.scripType > .scrip__img.img02 {
+  background: url(../img/script_card.png) center no-repeat;
+}
+.scripType > .scrip__img.img03 {
+  background: url(../img/script_typing.png) center no-repeat;
+}
+.scripType > .scrip__img.img04 {
+  background: url(../img/script_tetris.png) center no-repeat;
+}
+.scripType > .container {
+  margin: 0 auto;
+  position: relative;
+}
+.scripType .siteView {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -150px;
+  right: 20px;
+}
+.scripType .siteView p {
+  display: inline-block;
+  color: var(--lime);
+  font-size: 30px;
+  margin: 5% 10px 0 0;
+}
+.scripType .siteView .arrow {
+  width: 80px;
+  height: 80px;
+}
+.scripType .scrip__title {
+  padding-top: 7vw;
+  font-size: 100px;
+  font-weight: 700;
+}
+.scripType .scrip__text {
+  width: 85%;
+  font-family: var(--subFont);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* effect */
+#effect > .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* effType border */
+.effType,
+.effType .bar {
+  border-width: 4px;
+  border-color: var(--lime);
+  border-bottom-width: 4px;
+  border-bottom-color: var(--lime);
+}
+.effType svg > rect {
+  stroke-width: 3;
+}
+.effType svg > path {
+  stroke-width: 4;
+}
+.effType.yellow,
+.effType.yellow .bar,
+.effType.yellow svg > rect,
+.effType.yellow svg > path {
+  border-color: var(--yellow);
+  stroke: var(--yellow);
+}
+
+/* effType */
+.effType {
+  width: 46%;
+  position: relative;
+  margin: 2%;
+  border-style: solid;
+}
+.effType svg {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  width: 60px;
+  height: 60px;
+  transform: rotate(15deg);
+}
+.effType svg > path {
+  stroke-width: 5;
+}
+.effType .bar {
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2.3;
+  padding-left: 20px;
+  border-bottom-style: solid;
+}
+.effType img {
+  width: 100%;
+}

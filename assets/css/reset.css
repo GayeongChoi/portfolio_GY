@@ -261,6 +261,7 @@ img {
   width: 100%;
   vertical-align: top;
   object-fit: cover;
+  margin: 0;
 }
 
 /* 테두리 초기화 */

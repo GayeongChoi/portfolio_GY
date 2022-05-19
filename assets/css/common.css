@@ -2,12 +2,25 @@
 
 :root {
   --font-color: #fff;
-  --white: #fff;
+  --white: #ffffff;
   --lime: #8cffa7;
   --yellow: #ffff31;
   --black: #000;
   --green: #e1ff31;
   --subFont: "ChosunNm";
+}
+
+a:hover {
+  color: #8cffa7;
+}
+hr {
+  border: 1px solid var(--white);
+}
+textarea::placeholder,
+input::placeholder {
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* 바디 색상(배경색)*/
