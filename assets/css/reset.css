@@ -173,6 +173,10 @@
   padding-right: 100px !important;
 }
 
+iframe {
+  overflow: hidden;
+}
+
 /* 여백 초기화 */
 img,
 body,

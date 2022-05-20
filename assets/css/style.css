@@ -437,14 +437,15 @@ path {
   top: -150px;
   right: 20px;
 }
-.scripType .siteView p:hover {
-  color: var(--lime);
-}
 .scripType .siteView p {
   display: inline-block;
   color: var(--white);
   font-size: 30px;
   margin: 5% 5px 0 0;
+}
+.scripType a:hover,
+.scripType .siteView p:hover {
+  color: var(--lime);
 }
 .scripType .siteView .arrow {
   width: 50px;
@@ -496,6 +497,13 @@ path {
   padding-left: 20px;
   border-bottom-style: solid;
   background: var(--black);
+}
+.effType iframe {
+  position: relative;
+  top: 0;
+  left: -10px;
+  width: 105%;
+  height: 105%;
 }
 .effType img {
   width: 100%;
