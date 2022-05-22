@@ -550,6 +550,10 @@ path {
   background: linear-gradient(to bottom, #60b274, #b8b81b);
   position: relative;
 }
+#contact hr {
+  height: 1px;
+  margin: 1px;
+}
 #contact .top {
   height: 80%;
   display: flex;
@@ -562,8 +566,8 @@ path {
 }
 #contact .main {
   display: flex;
-  padding-top: 7%;
-  padding-bottom: 2%;
+  padding-top: 3vw;
+  padding-bottom: 1%;
 }
 #contact .main > .left {
   width: 50%;
@@ -572,7 +576,8 @@ path {
   text-transform: capitalize;
 }
 #contact .main > .left .title {
-  font-size: 110px;
+  /* font-size: 110px; */
+  font-size: 6vw;
   font-weight: 700;
   font-family: "GmarketSans";
   color: var(--yellow);
@@ -583,7 +588,7 @@ path {
   flex-direction: column;
 }
 #contact .main > .right .box {
-  height: 60px;
+  height: 3vw;
   background: rgba(0, 0, 0, 0);
   margin-bottom: 2vw;
   color: var(--white);
@@ -613,113 +618,34 @@ path {
   color: var(--black);
   background: var(--yellow);
 }
+#contact .bottom {
+  height: 10%;
+}
 #contact .footer {
   text-align: center;
   /* border-top: 1px solid #000; */
 }
 #contact .footer > div {
-  padding-top: 2%;
-}
-#contact .footer > div {
+  height: 2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 #contact .footer .logo > svg {
-  width: 120px;
-  height: 120px;
+  width: 5vw;
+  /* height: 120px; */
 }
-#contact .footer .follow .icons svg {
-  margin: 5px;
-}
-
-/* contact */
-#contact {
-  margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom, #60b274, #b8b81b);
-  position: relative;
-}
-#contact .top {
-  height: 80%;
-  display: flex;
-  align-items: center;
-}
-#contact .container {
-  margin: 0 auto;
-  padding: 0% 2vw;
-  padding-top: 0;
-}
-#contact .main {
-  display: flex;
-  padding-top: 7%;
-  padding-bottom: 2%;
-}
-#contact .main > .left {
-  width: 50%;
-  font-family: "맑은 고딕";
-  font-weight: 500;
-  text-transform: capitalize;
-}
-#contact .main > .left .title {
-  font-size: 110px;
-  font-weight: 700;
-  font-family: "GmarketSans";
-  color: var(--yellow);
-}
-#contact .main > .right {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-}
-#contact .main > .right .box {
-  height: 60px;
-  background: rgba(0, 0, 0, 0);
-  margin-bottom: 2vw;
-  color: var(--white);
-  padding: 3% 2%;
-  font-size: 20px;
-
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--white);
+#contact .footer .myEmail .mail {
   text-transform: none;
 }
-#contact .main > .right .message {
-  min-height: 200px;
-}
-#contact .main > .right .send {
-  width: 30%;
-  text-align: center;
-  padding: 10px 25px;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--yellow);
-  border-color: var(--yellow);
-  text-transform: uppercase;
-  transition: all 0.5s;
-}
-#contact .main > .right .send:hover {
-  color: var(--black);
-  background: var(--yellow);
-}
-#contact .footer {
-  text-align: center;
-  /* border-top: 1px solid #000; */
-}
-#contact .footer > div {
-  padding-top: 2%;
-}
-#contact .footer > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#contact .footer .logo > svg {
-  width: 120px;
-  height: 120px;
+#contact .footer .myEmail .mail:hover {
+  color: var(--lime);
 }
 #contact .footer .follow .icons svg {
   margin: 5px;
+}
+@media (max-width: 1300px) {
+  #contact .main > .left .title {
+    font-size: 6vw;
+  }
 }

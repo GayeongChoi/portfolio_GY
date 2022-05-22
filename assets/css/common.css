@@ -14,7 +14,7 @@ a:hover {
   color: #8cffa7;
 }
 hr {
-  border: 1px solid var(--white);
+  /* border: 1px solid var(--white); */
 }
 textarea::placeholder,
 input::placeholder {
