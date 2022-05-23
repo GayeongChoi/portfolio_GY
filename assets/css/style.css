@@ -23,13 +23,6 @@
 .sec1_text > div:first-child {
   font-weight: 300;
 }
-#webgl-canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-}
 
 /* about */
 #about {
@@ -241,21 +234,6 @@
 /* work */
 #work {
 }
-/* work border */
-#work .work__img,
-#work .work__text {
-  border-style: solid;
-  border-width: 4px;
-}
-#work .work__img .bar {
-  border-bottom-style: solid;
-  border-bottom-width: 4px;
-}
-#work svg > rect,
-path {
-  stroke-width: 4;
-}
-
 #work .work__img {
   height: 100%;
   width: 100%;
@@ -403,37 +381,64 @@ path {
   justify-self: end;
   margin-right: 10px;
 }
+/* work border */
+#work .work__img,
+#work .work__text {
+  border-style: solid;
+  border-width: 4px;
+}
+#work .work__img .bar {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+}
+#work svg > rect,
+path {
+  stroke-width: 4;
+}
 @media (max-width: 1000px) {
   #work .work__img {
     grid-column: 2 / 11;
     grid-row: 1/5;
+    justify-self: center;
+    align-self: center;
   }
-  .workType01 > .work__text {
-    grid-column: 1 / 8;
-    grid-row: 4/6;
-  }
-  .workType02 > .work__text {
-    grid-column: 5 / 12;
-    grid-row: 4/6;
-    padding-left: 30px;
-  }
-  #work .svg {
-    grid-row: 6/8;
-    width: 10vw;
+  #work .work__text {
+    width: 60vw;
+    min-height: 10vh;
   }
   #work .txt {
     align-self: center;
     white-space: nowrap;
     font-size: 2.5vw;
   }
+  #work .svg {
+    grid-row: 6/8;
+    width: 10vw;
+    height: 10vw;
+  }
+  .workType02 > .work__text {
+    grid-row: 4/6;
+    padding-left: 30px;
+  }
+  .workType02 > .heart {
+    grid-column: 7/9;
+  }
 }
 @media (max-width: 800px) {
   #work .work__img {
-    grid-column: 1 / 12;
+    grid-column: 2 / 11;
     grid-row: 1/4;
   }
+  #work .work__img .bar {
+    font-size: 2.5vw;
+  }
   #work .work__text {
-    font-size: 1vw;
+    grid-row: 4/6;
+    font-size: 2.5vw;
+    padding: 3vw;
+    font-size: 2.5vw;
+    min-height: auto;
+    height: auto;
   }
   #work .code.view,
   #work .code.txt {
@@ -443,19 +448,40 @@ path {
   #work .site.txt {
     grid-row: 5;
   }
+  #work .arrow {
+    grid-row: 6/8;
+    width: 10vw;
+  }
+  /* workType01 */
   .workType01 .work__text {
-    grid-column: 1 / 8;
-    font-size: 1vw;
+    grid-column: 2 / 9;
   }
   .workType01 .code.txt,
   .workType01 .site.txt {
-    grid-column: 8 / 10;
+    grid-column: 9;
   }
   .workType01 .code.view,
   .workType01 .site.view {
-    grid-column: 10/12;
+    grid-column: 10;
   }
+  /* workType02 */
   .workType02 .work__text {
+    grid-column: 4 /11;
+  }
+  .workType02 .code.txt,
+  .workType02 .site.txt {
+    grid-column: 3;
+  }
+  .workType02 .code.view,
+  .workType02 .site.view {
+    grid-column: 2;
+    justify-self: end;
+    margin-right: 0;
+  }
+  @media (max-width: 400px) {
+    .w-grid {
+      grid-template-rows: repeat(6, minmax(10px, auto));
+    }
   }
 }
 
@@ -469,7 +495,7 @@ path {
   margin-bottom: 30vh;
 }
 .scripType > .scrip__img {
-  height: 10vw;
+  height: 3vw;
   min-height: 500px;
 }
 .scripType > .scrip__img .img {
@@ -536,6 +562,7 @@ path {
 #effect > .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 /* effType */
 .effType {
@@ -614,6 +641,11 @@ path {
   }
   .effType .bar {
     font-size: 3vw;
+  }
+  .effType,
+  .effType .bar {
+    border-width: 2px;
+    border-bottom-width: 2px;
   }
 }
 
@@ -705,13 +737,13 @@ path {
 #contact .footer__logo {
 }
 #contact .footer.myEmail {
-  grid-column: 2/4;
+  grid-column: 2/5;
 }
 #contact .footer.follow {
   grid-column: 5/8;
 }
 #contact .footer.follow .icon {
-  /* margin-top: 2px; */
+  margin-top: 0.3vw;
   width: 3vw;
 }
 #contact .footer.more {
@@ -723,4 +755,13 @@ path {
   grid-row: 4;
   align-self: end;
   justify-self: center;
+}
+.icon.discord {
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  #contact .footer.more {
+    font-size: 1px;
+    overflow: hidden;
+  }
 }
