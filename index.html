@@ -229,12 +229,16 @@
 
           <article class="skill">
             <div class="skill__inner">
-              <div class="chart"><span class="chart_cen">html</span></div>
-              <div class="chart"><span class="chart_cen">CSS</span></div>
-              <div class="chart"><span class="chart_cen">vue</span></div>
-              <div class="chart"><span class="chart_cen">react</span></div>
-              <div class="chart"><span class="chart_cen">js</span></div>
-              <div class="chart"><span class="chart_cen">php</span></div>
+              <div class="chart chart1">
+                <span class="chart_cen">html</span>
+              </div>
+              <div class="chart chart2"><span class="chart_cen">CSS</span></div>
+              <div class="chart chart3"><span class="chart_cen">vue</span></div>
+              <div class="chart chart4">
+                <span class="chart_cen">react</span>
+              </div>
+              <div class="chart chart5"><span class="chart_cen">js</span></div>
+              <div class="chart chart6"><span class="chart_cen">php</span></div>
             </div>
           </article>
           <!-- //skill -->
@@ -1741,5 +1745,54 @@
       })();
     </script>
     <!-- //home -->
+
+    <!-- about -->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      window.addEventListener("scroll", () => {
+        let scrollTop =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          window.scrollY;
+
+        //info
+        document.querySelector(".scrollTop span").innerText =
+          Math.round(scrollTop);
+      });
+
+      $(window).ready(function () {
+        draw(90, ".chart1", "#8cffa7");
+        draw(85, ".chart2", "#8cffa7");
+        draw(72, ".chart3", "#8cffa7");
+        draw(69, ".chart4", "#8cffa7");
+        draw(80, ".chart5", "#8cffa7");
+        draw(73, ".chart6", "#8cffa7");
+      });
+
+      function draw(max, classname, colorname) {
+        var i = 1;
+        var func1 = setInterval(function () {
+          if (i < max) {
+            color1(i, classname, colorname);
+            i++;
+          } else {
+            clearInterval(func1);
+          }
+        }, 10);
+      }
+      function color1(i, classname, colorname) {
+        $(classname).css({
+          background:
+            "conic-gradient(" +
+            colorname +
+            " 0% " +
+            i +
+            "%, #000 " +
+            i +
+            "% 100%)",
+        });
+      }
+    </script>
+    <!-- //about -->
   </body>
 </html>
