@@ -30,7 +30,10 @@
   <body>
     <section id="scrip">
       <div class="cursor"></div>
-      <header class="header">look at script</header>
+      <header class="header">
+        <span id="testSpan">마우스를 올려주세요.</span>
+        look at script
+      </header>
       <!-- //header -->
 
       <div class="scrip__inner">
@@ -1053,6 +1056,18 @@
         let y = e.offsetY - 25 + "px";
         document.querySelector(".cursor").style.cssText =
           "left:" + x + "; top:" + y;
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#testSpan").hover(
+          function () {
+            $("#testSpan").text("Hover 적용");
+          },
+          function () {
+            $("#testSpan").text("마우스를 올려주세요.");
+          }
+        );
       });
     </script>
   </body>

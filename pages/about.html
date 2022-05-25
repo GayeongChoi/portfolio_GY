@@ -388,13 +388,15 @@
           Math.round(scrollTop);
       });
 
-      $(window).ready(function () {
-        draw(90, ".chart1", "#8cffa7");
-        draw(85, ".chart2", "#8cffa7");
-        draw(72, ".chart3", "#8cffa7");
-        draw(69, ".chart4", "#8cffa7");
-        draw(80, ".chart5", "#8cffa7");
-        draw(73, ".chart6", "#8cffa7");
+      $(".skill").scroll(function () {
+        $(window).ready(function () {
+          draw(90, ".chart1", "#8cffa7");
+          draw(85, ".chart2", "#8cffa7");
+          draw(72, ".chart3", "#8cffa7");
+          draw(69, ".chart4", "#8cffa7");
+          draw(80, ".chart5", "#8cffa7");
+          draw(73, ".chart6", "#8cffa7");
+        });
       });
 
       function draw(max, classname, colorname) {
