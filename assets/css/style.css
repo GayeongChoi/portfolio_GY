@@ -51,7 +51,7 @@
 }
 #about .me .text .int .link {
   font-family: "ChosunNm";
-  margin-top: 10vh;
+  margin-top: 6vh;
 }
 #about .me .text .int .link a {
   margin-right: 20px;
@@ -92,6 +92,9 @@
   object-fit: cover;
   border: 7px solid #8cffa7;
 }
+#about .me .image .arrow > svg {
+  width: 70px;
+}
 
 /* img01 */
 #about .me .image .img01 {
@@ -106,8 +109,8 @@
   padding: 40px 0 0 40px;
 }
 #about .me .image .img01 > div > img {
-  width: 640px;
-  height: 410px;
+  width: 810px;
+  height: 450px;
 }
 #about .me .image .img01 > div > .arrow {
   position: absolute;
@@ -119,11 +122,11 @@
 /*img02  */
 #about .me .image .img02 {
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   position: absolute;
   top: 40%;
-  left: 10%;
   z-index: -1;
+  justify-content: flex-start;
 }
 #about .me .image .img02 > div {
   height: 850px;
@@ -133,7 +136,7 @@
 }
 #about .me .image .img02 > div > img {
   width: 680px;
-  height: 360px;
+  height: 410px;
 }
 #about .me .image .img02 > div > .arrow {
   position: absolute;
@@ -141,8 +144,8 @@
   left: 0;
 }
 #about .me .image .img02 .heart {
-  width: 200px;
-  margin-left: 10%;
+  width: 120px;
+  margin-left: 20%;
 }
 @media (max-width: 1320px) {
   #about .me .image {
