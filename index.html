@@ -1291,33 +1291,27 @@
               THING*
             </h2>
           </div>
-          <input
-            class="box emailBox"
-            type="text"
-            name="email"
-            placeholder="email"
-            required=""
-            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-            data-v-1c7a87bc=""
-          />
-          <input
-            class="box nameBox"
-            type="text"
-            name="name"
-            placeholder="name"
-            required=""
-            data-v-1c7a87bc=""
-          />
-          <textarea
-            class="box textBox"
-            name="message"
-            placeholder="your message"
-            required=""
-            data-v-1c7a87bc=""
-          ></textarea>
-          <button class="box btn" type="submit" data-v-1c7a87bc="">
-            Send!
-          </button>
+          <form method="POST" action="https://formspree.io/f/{form_id}">
+            <input
+              class="box emailBox"
+              type="email"
+              name="email"
+              placeholder="email"
+              required=""
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              data-v-1c7a87bc=""
+            />
+            <textarea
+              class="box textBox"
+              name="message"
+              placeholder="your message"
+              required=""
+              data-v-1c7a87bc=""
+            ></textarea>
+            <button class="box btn" type="submit" data-v-1c7a87bc="">
+              Send!
+            </button>
+        </form>
         </div>
 
         <hr />
