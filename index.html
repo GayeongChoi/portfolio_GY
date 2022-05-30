@@ -12,18 +12,17 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <link rel="stylesheet" href="locomotive-scroll.css" />
+    
     <style>
       #webgl-canvas {
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100vh;
       }
     </style>
   </head>
   <body>
-    <div data-scroll-container id="wrap">
+    <div id="wrap">
       <section data-scroll-section id="home">
         <div class="sec1_text">
           <div>Welcome</div>
@@ -1291,7 +1290,7 @@
               THING*
             </h2>
           </div>
-          <form method="POST" action="https://formspree.io/f/{form_id}">
+          <form class="post" method="POST" action="https://formspree.io/wwuu123@naver.com">
             <input
               class="box emailBox"
               type="email"
@@ -1490,15 +1489,19 @@
     <span class="c-scrollbar_thumb" style="width: 384px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 336.189, 0, 0, 1);"></span>
 
     <!-- script -->
+    
     <script src="locomotive-scroll.min.js"></script>
+    
     <script>
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
         smooth: true,
+        getDirection: true,
       });
     </script>
     <!-- //locomotive-scroll -->
-
+    
+    
     <!-- home -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script id="js-vertex-shader" type="x-shader/x-vertex">
@@ -1560,7 +1563,6 @@
           gl_Position = projectionMatrix * mvPosition;
       }
     </script>
-    <!-- fragmentShader -->
     <script id="js-fragment-shader" type="x-shader/x-fragment">
       precision highp float;
 
@@ -1769,5 +1771,11 @@
       })();
     </script>
     <!-- //home -->
+
+    
+
+   
+
+    
   </body>
 </html>

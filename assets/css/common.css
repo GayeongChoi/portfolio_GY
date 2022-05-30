@@ -27,7 +27,7 @@ input::placeholder {
 body {
   padding: 10%;
   background: var(--black);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* 그리드 */
