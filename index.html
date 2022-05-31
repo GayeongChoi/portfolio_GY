@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-
     <link rel="stylesheet" href="locomotive-scroll.css" />
     
     <style>
@@ -22,7 +21,7 @@
     </style>
   </head>
   <body>
-    <div id="wrap">
+    <div data-scroll-container id="wrap">
       <section data-scroll-section id="home">
         <div class="sec1_text">
           <div>Welcome</div>
@@ -253,12 +252,12 @@
         <!-- //about__inner -->
       </section>
 
-      <section data-scroll-section id="work">
+      <section id="work" data-scroll-section data-scroll-section-inview>
         <div class="work__inner">
           <header class="header">I MADE SITE</header>
           <!-- //header -->
           <div class="container">
-            <div class="workType01 w_grid">
+            <div class="workType01 w_grid" data-scroll data-scroll-speed="3" data-scroll-direction="vertical">
               <div class="work__img">
                 <div class="bar">WESTENDARD SITE</div>
                 <img
@@ -401,7 +400,7 @@
             </div>
             <!-- //workType01 -->
 
-            <div class="workType02 w_grid">
+            <div class="workType02 w_grid" data-scroll data-scroll-speed="5" data-scroll-direction="vertical">
               <div class="work__img">
                 <div class="bar">PHP SITE</div>
                 <img src="./assets/img/work_PHP.png" alt="PHP site이미지" />
@@ -513,7 +512,7 @@
             </div>
             <!-- //workType02 -->
 
-            <div class="workType01 w_grid">
+            <div class="workType01 w_grid" data-scroll data-scroll-speed="7" data-scroll-direction="vertical">
               <div class="work__img">
                 <div class="bar">react SITE</div>
                 <img
@@ -657,7 +656,7 @@
             </div>
             <!-- //workType01 react-->
 
-            <div class="workType02 w_grid">
+            <div class="workType02 w_grid" data-scroll data-scroll-speed="2" data-scroll-direction="vertical">
               <div class="work__img">
                 <div class="bar">project SITE</div>
                 <img
@@ -1489,18 +1488,14 @@
     <span class="c-scrollbar_thumb" style="width: 384px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 336.189, 0, 0, 1);"></span>
 
     <!-- script -->
-    
     <script src="locomotive-scroll.min.js"></script>
-    
     <script>
       const scroller = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        getDirection: true,
       });
     </script>
     <!-- //locomotive-scroll -->
-    
     
     <!-- home -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -1771,11 +1766,5 @@
       })();
     </script>
     <!-- //home -->
-
-    
-
-   
-
-    
   </body>
 </html>
