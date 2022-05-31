@@ -1,8 +1,1 @@
-# portfolio_GY
-
-https://gayeongchoi.github.io/portfolio_GY/
-
-# 만드는 중...
-
-https://gayeongchoi.github.io/portfolio_GY/pages/000.html
-예시: https://gayeongchoi.github.io/portfolio_GY/pages/home.html
+만들기가 중단된 페이지 추후에 삭제 예정
